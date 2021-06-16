@@ -8,9 +8,7 @@
     "extends": [
         "plugin:react/recommended",
         "standard",
-        "plugin:@typescript-eslint/recommended",
-        "prettier/standard",
-        "prettier/react"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
