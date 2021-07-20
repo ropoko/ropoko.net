@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/pages/Home.module.css'
 import { Header } from '../components/Header'
 
 export default function Home() {
@@ -10,7 +9,7 @@ export default function Home() {
         <title>Ropoko | Portfolio</title>
       </Head>
 
-      <main className={styles.container}>
+      <main>
         <Header />
         <h1>Hello World!</h1>
       </main>
