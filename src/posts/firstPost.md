@@ -1,6 +1,5 @@
 ---
 title: Olá mundo!
-author: Ropoko :D
 date: '21/07/2021'
 ---
 

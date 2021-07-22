@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
+import { ListPosts } from '../../pages'
 
-export default function Post({ post }) {
+export default function Post({ post }: ListPosts) {
+  console.log(post)
+
   return (
     <div>
       <div>Posted on {post.frontmatter.date}</div>
