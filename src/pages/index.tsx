@@ -3,11 +3,10 @@ import Head from 'next/head'
 import matter from 'gray-matter'
 import fs from 'fs'
 import Post from '../components/Post'
+import { ListPosts } from '../models/ListPosts'
 import path from 'path'
 
-export default function Home({ posts }) {
-  // console.log(posts)
-
+export default function Home({ posts }: { posts: ListPosts[] }) {
   return (
     <div>
       <Head>
@@ -17,46 +16,33 @@ export default function Home({ posts }) {
       <main>
         <h1>Hello World!</h1>
       </main>
-      {/* <div className="posts">
+      <div className="posts">
         {posts.map(post => (
-          <Post post={post} key={post} />
+          <Post post={post} key={post.id} />
         ))}
-      </div> */}
+      </div>
     </div>
   )
-}
-
-export interface ListPosts {
-  slug: string
-  frontmatter: { title: string; date: string }
 }
 
 export const getStaticProps = async () => {
   const postDir = path.join(process.cwd(), 'src/posts')
   const files = fs.readdirSync(postDir)
 
-  // Get slug and frontmatter from posts
-  const posts = files.map(filename => {
-    const slug: string = filename.replace('.md', '')
+  let i = 0
 
-    const markdownWithMeta = fs.readFileSync(
-      path.join(postDir, filename),
-      'utf-8'
-    )
+  const posts: ListPosts[] = files.map(file => {
+    const slug: string = file.replace('.md', '')
 
-    const { data } = matter(markdownWithMeta)
+    const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8')
 
-    const post: ListPosts = {
-      slug: slug,
-      frontmatter: data as { title: string; date: string }
-    }
+    const { data } = matter(entireFile)
 
-    console.log(post)
+    const title: string = data.title
+    const date: string = data.date
 
-    return { post }
+    return { id: i++, slug, title, date }
   })
-
-  console.log(posts)
 
   return {
     props: {

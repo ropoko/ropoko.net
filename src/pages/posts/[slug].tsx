@@ -4,20 +4,17 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
+import { Post } from '../../models/Post'
 
-export default function PostPage({
-  frontmatter: { title, date },
-  content,
-  slug
-}) {
+export default function PostPage({ post }: { post: Post }) {
   return (
     <>
       <Link href="/">Go back</Link>
       <div>
-        <h1>{title}</h1>
-        <div>Posted on {date}</div>
+        <h1>{post.title}</h1>
+        <div>Posted on {post.date}</div>
         <div>
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          <div dangerouslySetInnerHTML={{ __html: marked(post.content) }}></div>
         </div>
       </div>
     </>
@@ -32,37 +29,32 @@ export const getStaticPaths = async () => {
     params: { slug: filename.replace('.md', '') }
   }))
 
-  console.log(paths)
-
   return {
     paths,
     fallback: false
   }
 }
 
-interface Post {
-  frontmatter: {
-    title: string
-    date: string
-  }
-  content: string
-  slug: string
-}
-
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({
+  params: { slug }
+}: {
+  params: { slug: string }
+}) => {
   const postDir = path.join(process.cwd(), 'src/posts')
 
-  const markdownWithMeta = fs.readFileSync(
-    path.join(postDir, `${slug}.md`),
-    'utf-8'
-  )
+  const entireFile = fs.readFileSync(path.join(postDir, `${slug}.md`), 'utf-8')
 
-  const { data: frontmatter, content }: Post = matter(markdownWithMeta)
+  const { data, content } = matter(entireFile)
+
+  const post: Post = {
+    date: data.date,
+    title: data.title,
+    content
+  }
+
   return {
     props: {
-      frontmatter,
-      content,
-      slug
+      post
     }
   }
 }
