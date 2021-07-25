@@ -12,4 +12,25 @@ export default createGlobalStyle`
     color: ${props => props.theme.colors.text};
     font: 400 16px 'Rajdhani', sans-serif;
   }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  @media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+  }
+
+  @media(max-width: 720px) {
+      html {
+          font-size: 87.5%;
+      }
+  }
 `
