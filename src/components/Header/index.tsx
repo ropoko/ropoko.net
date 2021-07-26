@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
-  const { colors, title } = useContext(ThemeContext)
+  const { title } = useContext(ThemeContext)
 
   const img =
     'https://avatars.githubusercontent.com/u/49417432?s=400&u=af9ff6eddae3945c6eb61b4ee4a8db97b426bf7a&v=4'

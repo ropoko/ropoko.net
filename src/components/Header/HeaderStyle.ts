@@ -8,6 +8,11 @@ export const StyledHeader = styled.div`
   align-items: center;
   padding: 1rem;
 
+  a:hover {
+    color: ${props => props.theme.colors.text};
+    text-decoration: underline;
+  }
+
   .social #avatar {
     border-radius: 1.6rem;
   }
@@ -23,6 +28,16 @@ export const StyledHeader = styled.div`
   }
 
   .menu a {
-    margin: 0 0.8rem;
+    margin: 0 0.4rem;
+  }
+
+  .menu a + a {
+    margin-right: 1.2rem;
+  }
+
+  @media (max-width: 580px) {
+    .social a {
+      display: none;
+    }
   }
 `
