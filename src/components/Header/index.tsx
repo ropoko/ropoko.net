@@ -61,78 +61,16 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <Switch
           checked={title === 'dark'}
           onChange={toggleTheme}
-          handleDiameter={28}
-          offColor="#08f"
-          onColor="#0ff"
-          offHandleColor="#0ff"
-          onHandleColor="#08f"
-          height={40}
-          width={70}
-          borderRadius={6}
-          activeBoxShadow="0px 0px 1px 2px #fffc35"
-          uncheckedIcon={
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                fontSize: 15,
-                color: 'orange',
-                paddingRight: 2
-              }}
-            >
-              Off
-            </div>
-          }
-          checkedIcon={
-            <svg viewBox="0 0 10 10" height="100%" width="100%" fill="yellow">
-              <circle r={3} cx={5} cy={5} />
-            </svg>
-          }
-          uncheckedHandleIcon={
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                fontSize: 20
-              }}
-            >
-              ☹
-            </div>
-          }
-          checkedHandleIcon={
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                height: '100%',
-                color: 'red',
-                fontSize: 18
-              }}
-            >
-              ♥
-            </div>
-          }
-          className="react-switch"
-          id="small-radius-switch"
-        />
-
-        {/* <Switch
-          onChange={toggleTheme}
-          checked={title === 'dark'}
-          checkedIcon={false}
+          handleDiameter={17}
+          offColor="#262a2e"
+          onColor="#f6f6f6"
+          offHandleColor="#f6f6f6"
+          onHandleColor="#262a2e"
+          height={26}
+          width={54}
           uncheckedIcon={false}
-          height={10}
-          width={40}
-          handleDiameter={20}
-          offColor={colors.primary}
-          onColor={colors.secondary}
-          className="switch"
-        /> */}
+          checkedIcon={false}
+        />
       </div>
     </StyledHeader>
   )
