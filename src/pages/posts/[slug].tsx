@@ -4,9 +4,9 @@ import path from 'path'
 import matter from 'gray-matter'
 import marked from 'marked'
 import Link from 'next/link'
-import { Post } from '../../models/Post'
+import { Posts } from '../../models/Posts'
 
-export default function PostPage({ post }: { post: Post }) {
+export default function PostPage({ post }: { post: Posts }) {
   return (
     <>
       <Link href="/">Go back</Link>
@@ -46,7 +46,11 @@ export const getStaticProps = async ({
 
   const { data, content } = matter(entireFile)
 
-  const post: Post = {
+  const id: number = data.id
+
+  const post: Posts = {
+    id,
+    slug,
     date: data.date,
     title: data.title,
     content
