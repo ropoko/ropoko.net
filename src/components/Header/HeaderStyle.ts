@@ -7,6 +7,7 @@ export const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  box-shadow: 1px 0.6rem 1rem rgba(0, 0, 0, 0.2);
 
   a:hover {
     color: ${props => props.theme.colors.text};
