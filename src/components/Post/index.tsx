@@ -1,14 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import { ListPosts } from '../../models/ListPosts'
+import { Posts } from '../../models/Posts'
+import { PostStyle } from './PostStyle'
 
-export default function Post({ post }: { post: ListPosts }) {
+export default function Post({ post }: { post: Posts }) {
   return (
-    <div>
-      <div>Posted on {post.date}</div>
-      <h3>{post.title}</h3>
+    <PostStyle>
+      <header>
+        <h1>{post.title}</h1>
+        <em>Posted on {post.date}</em>
+      </header>
 
       <Link href={`/posts/${post.slug}`}> Read more </Link>
-    </div>
+    </PostStyle>
   )
 }
