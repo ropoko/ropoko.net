@@ -6,6 +6,6 @@ export default {
     header: '#272727',
     background: '#363636',
     text: '#F5F5F5',
-    highlight: '#9a1b17'
+    highlight: '#D7E512'
   }
 }
