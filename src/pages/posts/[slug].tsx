@@ -2,23 +2,11 @@ import React from 'react'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import marked from 'marked'
-import Link from 'next/link'
 import { Posts } from '../../models/Posts'
+import PostContent from '../../components/PostContent'
 
 export default function PostPage({ post }: { post: Posts }) {
-  return (
-    <>
-      <Link href="/">Go back</Link>
-      <div>
-        <h1>{post.title}</h1>
-        <div>Posted on {post.date}</div>
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: marked(post.content) }}></div>
-        </div>
-      </div>
-    </>
-  )
+  return <PostContent post={post} />
 }
 
 export const getStaticPaths = async () => {

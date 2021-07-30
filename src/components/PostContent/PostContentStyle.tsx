@@ -1,36 +1,34 @@
 import styled from 'styled-components'
 
-export const PostStyle = styled.div`
-  margin: 3rem auto;
+export const PostContentStyled = styled.div`
   width: 60%;
-  min-width: 60%;
-  max-width: 95%;
-
-  h1 {
-    font-size: 3.2rem;
-  }
+  margin: 2.4rem auto;
 
   header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    color: ${props => props.theme.colors.highlight};
   }
 
-  a {
-    color: ${props => props.theme.colors.highlight};
+  header a {
     text-decoration: underline;
     transition: font-size 0.2s;
   }
 
-  a:hover {
+  header a:hover {
     font-size: 1.6rem;
   }
 
-  @media (max-width: 1080px) {
-    width: 80%;
+  main {
+    margin: 1.6rem 0;
+    text-align: justify;
   }
 
-  @media (max-width: 720px) {
-    width: 95%;
+  main h1 {
+    font-size: 3.2rem;
+    text-align: left;
+    margin: 1rem 0;
   }
 `
