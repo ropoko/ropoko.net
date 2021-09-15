@@ -1,24 +1,41 @@
 import styled from 'styled-components'
 
 export const StyledHeader = styled.div`
-  background: ${props => props.theme.colors.background};
+  background: ${props => props.theme.colors.header};
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  box-shadow: 1px 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.4rem 0.7rem;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.25);
+
+  div:not(.menu) {
+    display: flex;
+    align-items:center;
+  }
+
+  div:not(.menu) button {
+    margin-left: 1rem;
+    border: none;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+  }
+
+  div:not(.menu) button img {
+    width: inherit;
+  }
 
   a:hover {
     color: ${props => props.theme.colors.text};
     text-decoration: underline;
   }
 
-  .social #avatar {
-    border-radius: 1.6rem;
+  #avatar {
+    border-radius: 10px;
   }
 
-  .social > a {
+  a:first-child() {
     margin-left: 1rem;
   }
 
@@ -30,10 +47,6 @@ export const StyledHeader = styled.div`
 
   .menu a {
     margin: 0 0.4rem;
-  }
-
-  .menu a + a {
-    margin-right: 1.2rem;
   }
 
   @media (max-width: 580px) {

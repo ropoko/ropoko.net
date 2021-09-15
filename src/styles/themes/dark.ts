@@ -3,8 +3,8 @@
 export default {
   title: 'dark',
   colors: {
-    header: '#272727',
-    background: '#363636',
+    header: '#292929',
+    background: '#383838',
     text: '#F5F5F5',
     highlight: '#D7E512'
   }
