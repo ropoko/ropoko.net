@@ -1,17 +1,25 @@
-import React from 'react'
-import Link from 'next/link'
 import { Posts } from '../../models/Posts'
-import { PostStyle } from './PostStyle'
+import { PostStyled } from './PostStyle'
+import Link from 'next/link'
+import marked from 'marked'
 
-export default function Post({ post }: { post: Posts }) {
+interface Props {
+  post: Posts
+}
+
+const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
   return (
-    <PostStyle>
+    <PostStyled>
       <header>
-        <h1>{post.title}</h1>
-        <em>Posted on {post.date}</em>
+        <Link href="/">Go back</Link>
+        <p>Posted on {post.date}</p>
       </header>
-
-      <Link href={`/posts/${post.slug}`}> Read more </Link>
-    </PostStyle>
+      <main>
+        <h1>{post.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: marked(post.content) }}></div>
+      </main>
+    </PostStyled>
   )
 }
+
+export default Post

@@ -4,4 +4,5 @@ export interface Posts {
   title: string
   date: string
   content: string
+  tags: string[]
 }

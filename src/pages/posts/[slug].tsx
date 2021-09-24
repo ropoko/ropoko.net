@@ -3,10 +3,10 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { Posts } from '../../models/Posts'
-import PostContent from '../../components/PostContent'
+import Post from '../../components/Post'
 
 export default function PostPage({ post }: { post: Posts }) {
-  return <PostContent post={post} />
+  return <Post post={post} />
 }
 
 export const getStaticPaths = async () => {
@@ -35,13 +35,15 @@ export const getStaticProps = async ({
   const { data, content } = matter(entireFile)
 
   const id: number = data.id
+  const tags: string[] = data.tags
 
   const post: Posts = {
     id,
     slug,
     date: data.date,
     title: data.title,
-    content
+    content,
+    tags
   }
 
   return {
