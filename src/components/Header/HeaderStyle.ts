@@ -16,9 +16,9 @@ export const StyledHeader = styled.div`
   }
 
   .theme-switch button {
-    width: 24px;
-    height: 24px;
-    padding: 0 0 0 1rem;
+    //width: 24px;
+    //height: 24px;
+    padding: 5px 0 0 1rem;
     border: none;
     background: transparent;
     outline: none;

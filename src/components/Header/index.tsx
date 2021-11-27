@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
       <div className="theme-switch">
         <Image src={img} alt="Me" width="55" height="55" />
         <button onClick={changeTheme}>
-          <img src={theme} alt="theme" />
+          <Image src={theme} alt="theme" width="24" height="24" />
         </button>
       </div>
 
