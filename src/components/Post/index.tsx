@@ -11,7 +11,7 @@ const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
   return (
     <PostStyled>
       <header>
-        <Link href="/">Go back</Link>
+        <Link href="/">[ Go back ]</Link>
         <p>Posted on {post.date}</p>
       </header>
       <main>

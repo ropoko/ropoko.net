@@ -13,12 +13,11 @@ export const PostStyled = styled.div`
   }
 
   header a {
-    text-decoration: underline;
     transition: font-size 0.2s;
   }
 
   header a:hover {
-    font-size: 1.6rem;
+    text-decoration: underline;
   }
 
   main {

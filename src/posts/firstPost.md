@@ -1,12 +1,12 @@
 ---
 id: 0
-title: Olá mundo!
+title: Hello World!
 date: '21/07/2021'
 tags: ['oi', 'oi2']
 ---
 
-Seja bem vindo ao meu primeiro post!
+## Welcome to my first post!
 
-## Espero que goste!
+I hope you enjoy it
 
 Bye ;)

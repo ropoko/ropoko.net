@@ -6,8 +6,10 @@ export const ListPostStyle = styled.div`
   min-width: 60%;
   max-width: 95%;
 
+  padding: 0 0.5rem;
+
   h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   header {
@@ -16,10 +18,21 @@ export const ListPostStyle = styled.div`
     justify-content: space-between;
   }
 
+  header section h1 {
+    //border: 1px solid red;
+    width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.4);
   }
 
   footer .tags a {
@@ -33,12 +46,11 @@ export const ListPostStyle = styled.div`
 
   a {
     color: ${props => props.theme.colors.highlight};
-    text-decoration: underline;
     transition: font-size 0.2s;
   }
 
   a:hover {
-    font-size: 1.6rem;
+    text-decoration: underline;
   }
 
   @media (max-width: 1080px) {
