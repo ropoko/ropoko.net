@@ -19,8 +19,6 @@ export const ListPostStyle = styled.div`
   }
 
   header section h1 {
-    //border: 1px solid red;
-    width: 210px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -59,5 +57,11 @@ export const ListPostStyle = styled.div`
 
   @media (max-width: 720px) {
     width: 95%;
+  }
+
+  @media (max-width: 530px) {
+    header section h1 {
+      width: 270px;
+    }
   }
 `
