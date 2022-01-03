@@ -32,6 +32,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <Link href="/projects">[ Projects ]</Link>
         <Link href="/about">[ About me ]</Link>
         <Link href="/tags">[ Tags ]</Link>
+        <Link href="https://realpython.com"></Link>
+        <Link href="https://realpython.com/introduction-to-python-generators/"></Link>
       </div>
     </StyledHeader>
   )
