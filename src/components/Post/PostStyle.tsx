@@ -22,12 +22,29 @@ export const PostStyled = styled.div`
 
   main {
     margin: 1.6rem 0;
+    font-size: 1.1em;
     text-align: justify;
+    word-wrap: break-word;
+    font-weight: 500;
   }
 
   main h1 {
     font-size: 3.2rem;
-    text-align: left;
     margin: 1rem 0;
+  }
+
+  main p {
+    display: flex;
+  }
+
+  main p img {
+    width: 100%;
+    height: 100%;
+    max-width: 25rem;
+    margin: 1rem auto;
+  }
+
+  @media (max-width: 530px) {
+    width: 90%;
   }
 `

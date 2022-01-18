@@ -30,7 +30,7 @@ export const ListPostStyle = styled.div`
     align-items: center;
 
     padding-bottom: 0.8rem;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.4);
+    border-bottom: 1px solid ${props => props.theme.colors.separator};
   }
 
   footer .tags a {
