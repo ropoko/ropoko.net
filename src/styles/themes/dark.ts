@@ -6,6 +6,7 @@ export default {
     header: '#292929',
     background: '#111111',
     text: '#F5F5F5',
-    highlight: '#D7E512'
+    highlight: '#D7E512',
+    separator: '#F5F5F5'
   }
 }
