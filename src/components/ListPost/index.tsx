@@ -15,13 +15,13 @@ export default function ListPost({ post }: { post: Posts }) {
 
       <footer>
         <Link href={`/posts/${post.slug}`}> [ Read more ] </Link>
-        {/* <section className="tags">
+        <section className="tags">
           {post.tags.map(tag => (
             <a key={tag} href="#">
               {tag}
             </a>
           ))}
-        </section> */}
+        </section>
       </footer>
     </ListPostStyle>
   )

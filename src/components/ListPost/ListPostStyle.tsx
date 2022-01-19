@@ -36,10 +36,11 @@ export const ListPostStyle = styled.div`
   footer .tags a {
     padding: 0.2rem;
     margin: 0 0.2rem;
-    text-decoration: none;
 
-    color: #d2259a;
-    border: #cfcfcf 1px solid;
+    color: #000;
+    border-radius: 5px;
+    background: ${props => props.theme.colors.tags.background};
+    border: ${props => props.theme.colors.tags.border} 1px solid;
   }
 
   a {

@@ -12,6 +12,10 @@ declare module 'styled-components' {
       text: string
       highlight: string
       separator: string
+      tags: {
+        background: string
+        border: string
+      }
     }
   }
 }
