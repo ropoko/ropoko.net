@@ -2,7 +2,7 @@
 id: 0
 title: Hello World!
 date: '21/07/2021'
-tags: []
+tags: ['linux', 'test name tag with long name']
 ---
 
 ## Welcome to my first post!

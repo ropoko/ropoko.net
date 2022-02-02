@@ -6,49 +6,49 @@ import { Posts } from '../../models/Posts'
 import Post from '../../components/Post'
 
 export default function PostPage({ post }: { post: Posts }) {
-  return <Post post={post} />
+	return <Post post={post} />
 }
 
 export const getStaticPaths = async () => {
-  const postDir = path.join(process.cwd(), 'src/posts')
-  const files = fs.readdirSync(postDir)
+	const postDir = path.join(process.cwd(), 'src/posts')
+	const files = fs.readdirSync(postDir)
 
-  const paths = files.map(filename => ({
-    params: { slug: filename.replace('.md', '') }
-  }))
+	const paths = files.map(filename => ({
+		params: { slug: filename.replace('.md', '') }
+	}))
 
-  return {
-    paths,
-    fallback: false
-  }
+	return {
+		paths,
+		fallback: false
+	}
 }
 
 export const getStaticProps = async ({
-  params: { slug }
+	params: { slug }
 }: {
-  params: { slug: string }
+	params: { slug: string }
 }) => {
-  const postDir = path.join(process.cwd(), 'src/posts')
+	const postDir = path.join(process.cwd(), 'src/posts')
 
-  const entireFile = fs.readFileSync(path.join(postDir, `${slug}.md`), 'utf-8')
+	const entireFile = fs.readFileSync(path.join(postDir, `${slug}.md`), 'utf-8')
 
-  const { data, content } = matter(entireFile)
+	const { data, content } = matter(entireFile)
 
-  const id: number = data.id
-  const tags: string[] = data.tags
+	const id: number = data.id
+	const tags: string[] = data.tags
 
-  const post: Posts = {
-    id,
-    slug,
-    date: data.date,
-    title: data.title,
-    content,
-    tags
-  }
+	const post: Posts = {
+		id,
+		slug,
+		date: data.date,
+		title: data.title,
+		content,
+		tags
+	}
 
-  return {
-    props: {
-      post
-    }
-  }
+	return {
+		props: {
+			post
+		}
+	}
 }

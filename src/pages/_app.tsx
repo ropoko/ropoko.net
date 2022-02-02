@@ -9,19 +9,19 @@ import light from '../styles/themes/light'
 import Header from '../components/Header'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
-  const [theme, setTheme] = useState(dark)
+	const [theme, setTheme] = useState(dark)
 
-  const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light)
-  }
+	const toggleTheme = () => {
+		setTheme(theme.title === 'light' ? dark : light)
+	}
 
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Header toggleTheme={toggleTheme} />
-      <Component {...pageProps} />
-    </ThemeProvider>
-  )
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
+			<Header toggleTheme={toggleTheme} />
+			<Component {...pageProps} />
+		</ThemeProvider>
+	)
 }
 
 export default MyApp
