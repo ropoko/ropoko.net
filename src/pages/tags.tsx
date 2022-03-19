@@ -2,35 +2,42 @@ import React from 'react'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import CountTag from '../components/CountTag'
 
-export default function Tags({ tags }: { tags: string[] }) {
-	return (
-		<div>
-			<strong> hello </strong>
-			{tags.map((tag, index) => (
-				<h3 key={index}> {tag} </h3>
-			))}
-		</div>
-	)
+export default function Tags({
+	tags,
+	counts
+}: {
+	tags: string[]
+	counts: { [key: string]: number }
+}) {
+	return <CountTag tags={tags} counter={counts} />
 }
 
 export const getStaticProps = async () => {
 	const postDir = path.join(process.cwd(), 'src/posts')
 	const files = fs.readdirSync(postDir)
 
-	const tags: string[] = files.map(file => {
-		// const slug: string = file.replace('.md', '')
+	const counts: { [key: string]: number } = {}
 
+	files.map(file => {
 		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8')
 
 		const { data } = matter(entireFile)
 
-		return data.tags
+		data.tags.forEach(function (tag: string) {
+			counts[tag] = (counts[tag] || 0) + 1
+		})
+
+		return counts
 	})
+
+	const tags: string[] = Object.keys(counts)
 
 	return {
 		props: {
-			tags
+			tags,
+			counts
 		}
 	}
 }
