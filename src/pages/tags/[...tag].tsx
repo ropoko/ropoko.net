@@ -6,7 +6,6 @@ import { Posts } from '../../models/Posts'
 import ListPost from '../../components/ListPost'
 
 export default function Tag({ posts }: { posts: Posts[] }) {
-	console.log('meu dues', posts)
 	if (posts !== undefined && posts.length > 0) {
 		return (
 			<div>
@@ -44,7 +43,7 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
-		fallback: true
+		fallback: 'blocking'
 	}
 }
 
