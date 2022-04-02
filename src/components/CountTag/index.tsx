@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import { StyledCountTag } from './CountTagStyle'
 
@@ -14,7 +15,9 @@ export default function CountTag({
 				<div key={index}>
 					<p>{counter[tag]}</p>
 					<strong>
-						<a href={'https://asdas' + index + '.com'}> {tag} </a>
+						<Link key={index} href={`tags/${tag}`}>
+							{tag}
+						</Link>
 					</strong>
 				</div>
 			))}

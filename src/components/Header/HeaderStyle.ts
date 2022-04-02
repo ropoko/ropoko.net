@@ -13,6 +13,7 @@ export const StyledHeader = styled.div`
 
 	.theme-switch img {
 		border-radius: 1rem;
+		cursor: pointer;
 	}
 
 	.theme-switch button {

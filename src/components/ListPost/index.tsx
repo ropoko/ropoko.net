@@ -17,7 +17,7 @@ export default function ListPost({ post }: { post: Posts }) {
 				<Link href={`/posts/${post.slug}`}> [ Read more ] </Link>
 				<section className="tags">
 					{post.tags.map(tag => (
-						<a key={tag} href="#">
+						<a key={tag} href={`/tags/${tag}`}>
 							{tag}
 						</a>
 					))}

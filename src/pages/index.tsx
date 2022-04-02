@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
