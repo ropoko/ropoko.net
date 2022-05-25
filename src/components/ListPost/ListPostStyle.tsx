@@ -18,10 +18,15 @@ export const ListPostStyle = styled.div`
 		justify-content: space-between;
 	}
 
+	header section {
+		max-width: calc(100% - 10rem);
+	}
+
 	header section h1 {
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+		margin-right: 1rem;
 	}
 
 	footer {
@@ -75,6 +80,10 @@ export const ListPostStyle = styled.div`
 	}
 
 	@media (max-width: 530px) {
+		header section {
+			max-width: 100%;
+		}
+
 		header section h1 {
 			width: 270px;
 		}
