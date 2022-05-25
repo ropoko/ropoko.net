@@ -18,6 +18,10 @@ export default createGlobalStyle`
     color: inherit;
   }
 
+	a:hover {
+		text-decoration: underline;
+	}
+
   button {
     cursor: pointer;
   }

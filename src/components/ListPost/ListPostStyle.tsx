@@ -25,12 +25,30 @@ export const ListPostStyle = styled.div`
 	}
 
 	footer {
+		width: 100%;
+		height: 2.5rem;
+		padding-bottom: 0.8rem;
+		border-bottom: 1px solid ${props => props.theme.colors.separator};
+	}
+
+	footer .footer-container {
+		height: 100%;
+		width: 100%;
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
 
-		padding-bottom: 0.8rem;
-		border-bottom: 1px solid ${props => props.theme.colors.separator};
+	footer .footer-container > a {
+		white-space: nowrap;
+		margin-right: 40px;
+	}
+
+	footer .tags {
+		overflow-x: clip;
+		white-space: nowrap;
+		text-overflow: clip;
 	}
 
 	footer .tags a {
@@ -46,10 +64,6 @@ export const ListPostStyle = styled.div`
 	a {
 		color: ${props => props.theme.colors.highlight};
 		transition: font-size 0.2s;
-	}
-
-	a:hover {
-		text-decoration: underline;
 	}
 
 	@media (max-width: 1080px) {

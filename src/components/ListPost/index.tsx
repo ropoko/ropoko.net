@@ -14,14 +14,16 @@ export default function ListPost({ post }: { post: Posts }) {
 			</header>
 
 			<footer>
-				<Link href={`/posts/${post.slug}`}> [ Read more ] </Link>
-				<section className="tags">
-					{post.tags.map(tag => (
-						<a key={tag} href={`/tags/${tag}`}>
-							{tag}
-						</a>
-					))}
-				</section>
+				<div className="footer-container">
+					<Link href={`/posts/${post.slug}`}> [ Read more ] </Link>
+					<section className="tags">
+						{post.tags.map(tag => (
+							<a key={tag} href={`/tags/${tag}`}>
+								{tag}
+							</a>
+						))}
+					</section>
+				</div>
 			</footer>
 		</ListPostStyle>
 	)
