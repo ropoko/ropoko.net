@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ListPostStyle = styled.div`
 	margin: 3rem auto;
 	width: 60%;
-	min-width: 60%;
+	min-width: 360px;
 	max-width: 95%;
 
 	padding: 0 0.5rem;
