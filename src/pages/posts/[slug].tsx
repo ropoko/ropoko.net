@@ -4,9 +4,17 @@ import path from 'path'
 import matter from 'gray-matter'
 import { Posts } from '../../models/Posts'
 import Post from '../../components/Post'
+import Head from 'next/head'
 
 export default function PostPage({ post }: { post: Posts }) {
-	return <Post post={post} />
+	return (
+		<>
+			<Head>
+				<title>Ropoko | {post.title}</title>
+			</Head>
+			<Post post={post} />
+		</>
+	)
 }
 
 export const getStaticPaths = async () => {

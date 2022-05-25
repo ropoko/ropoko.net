@@ -41,7 +41,6 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
-					<title>Ropoko | Blog</title>
 					<meta
 						name="description"
 						content="Personal blog where you'll see posts and tutorials"

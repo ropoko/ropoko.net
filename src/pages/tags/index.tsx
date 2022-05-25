@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import CountTag from '../../components/CountTag'
+import Head from 'next/head'
 
 export default function Tags({
 	tags,
@@ -11,7 +12,14 @@ export default function Tags({
 	tags: string[]
 	counts: { [key: string]: number }
 }) {
-	return <CountTag tags={tags} counter={counts} />
+	return (
+		<>
+			<Head>
+				<title>Ropoko | Tags</title>
+			</Head>
+			<CountTag tags={tags} counter={counts} />
+		</>
+	)
 }
 
 export const getStaticProps = async () => {

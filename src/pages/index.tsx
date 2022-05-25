@@ -11,7 +11,7 @@ export default function Home({ posts }: { posts: Posts[] }) {
 	return (
 		<div>
 			<Head>
-				<title>Ropoko | Portfolio</title>
+				<title>Ropoko | Blog</title>
 			</Head>
 
 			<main className="posts">
