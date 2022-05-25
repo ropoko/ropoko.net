@@ -35,6 +35,7 @@ export const PostStyled = styled.div`
 
 	main p {
 		display: flex;
+		margin-bottom: 1rem;
 	}
 
 	main p img {
