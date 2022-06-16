@@ -33,7 +33,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 			</div>
 
 			<div className="menu">
-				<Link href="/projects">[ Projects ]</Link>
+				<Link href="/drafts-notes">[ Drafts & Notes ]</Link>
 				<Link href="/about">[ About me ]</Link>
 				<Link href="/tags">[ Tags ]</Link>
 			</div>
