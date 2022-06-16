@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import React from 'react'
-import { StyledCountTag } from './CountTagStyle'
+import Link from 'next/link';
+import React from 'react';
+import { StyledCountTag } from './CountTagStyle';
 
 export default function CountTag({
 	tags,
 	counter
 }: {
-	tags: string[]
-	counter: { [key: string]: number }
+	tags: string[];
+	counter: { [key: string]: number };
 }) {
 	return (
 		<StyledCountTag>
@@ -22,5 +22,5 @@ export default function CountTag({
 				</div>
 			))}
 		</StyledCountTag>
-	)
+	);
 }

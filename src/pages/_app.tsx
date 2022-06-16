@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import type { AppProps } from 'next/app'
+import React, { useState } from 'react';
+import type { AppProps } from 'next/app';
 
-import GlobalStyle from '../styles/global'
-import { ThemeProvider } from 'styled-components'
+import GlobalStyle from '../styles/global';
+import { ThemeProvider } from 'styled-components';
 
-import dark from '../styles/themes/dark'
-import light from '../styles/themes/light'
-import Header from '../components/Header'
+import dark from '../styles/themes/dark';
+import light from '../styles/themes/light';
+import Header from '../components/Header';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
-	const [theme, setTheme] = useState(dark)
+	const [theme, setTheme] = useState(dark);
 
 	const toggleTheme = () => {
-		setTheme(theme.title === 'light' ? dark : light)
-	}
+		setTheme(theme.title === 'light' ? dark : light);
+	};
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -21,7 +21,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 			<Header toggleTheme={toggleTheme} />
 			<Component {...pageProps} />
 		</ThemeProvider>
-	)
-}
+	);
+};
 
-export default MyApp
+export default MyApp;

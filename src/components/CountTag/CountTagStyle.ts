@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledCountTag = styled.div`
 	display: flex;
@@ -26,4 +26,4 @@ export const StyledCountTag = styled.div`
 			padding: 0.4rem;
 		}
 	}
-`
+`;

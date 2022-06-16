@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
-import { Posts } from '../../models/Posts'
-import { ListPostStyle } from './ListPostStyle'
+import React from 'react';
+import Link from 'next/link';
+import { Posts } from '../../models/Posts';
+import { ListPostStyle } from './ListPostStyle';
 
 export default function ListPost({ post }: { post: Posts }) {
 	return (
@@ -26,5 +26,5 @@ export default function ListPost({ post }: { post: Posts }) {
 				</div>
 			</footer>
 		</ListPostStyle>
-	)
+	);
 }

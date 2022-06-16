@@ -1,11 +1,11 @@
 /* eslint-disable array-callback-return */
-import React from 'react'
-import Head from 'next/head'
-import matter from 'gray-matter'
-import fs from 'fs'
-import ListPost from '../components/ListPost'
-import { Posts } from '../models/Posts'
-import path from 'path'
+import React from 'react';
+import Head from 'next/head';
+import matter from 'gray-matter';
+import fs from 'fs';
+import ListPost from '../components/ListPost';
+import { Posts } from '../models/Posts';
+import path from 'path';
 
 export default function Home({ posts }: { posts: Posts[] }) {
 	return (
@@ -20,31 +20,31 @@ export default function Home({ posts }: { posts: Posts[] }) {
 				))}
 			</main>
 		</div>
-	)
+	);
 }
 
 export const getStaticProps = async () => {
-	const postDir = path.join(process.cwd(), 'src/posts')
-	const files = fs.readdirSync(postDir)
+	const postDir = path.join(process.cwd(), 'src/posts');
+	const files = fs.readdirSync(postDir);
 
 	const posts: Posts[] = files.map(file => {
-		const slug: string = file.replace('.md', '')
+		const slug: string = file.replace('.md', '');
 
-		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8')
+		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
 
-		const { data, content } = matter(entireFile)
+		const { data, content } = matter(entireFile);
 
-		const title: string = data.title
-		const date: string = data.date
-		const id: number = data.id
-		const tags: string[] = data.tags
+		const title: string = data.title;
+		const date: string = data.date;
+		const id: number = data.id;
+		const tags: string[] = data.tags;
 
-		return { id, slug, title, date, content, tags }
-	})
+		return { id, slug, title, date, content, tags };
+	});
 
 	return {
 		props: {
 			posts
 		}
-	}
-}
+	};
+};

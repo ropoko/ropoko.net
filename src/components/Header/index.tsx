@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import { StyledHeader } from './HeaderStyle'
-import Link from 'next/link'
-import Image from 'next/image'
+import React, { useState } from 'react';
+import { StyledHeader } from './HeaderStyle';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface Props {
-	toggleTheme(): void
+	toggleTheme(): void;
 }
 
 const Header: React.FC<Props> = ({ toggleTheme }) => {
 	const img =
-		'https://avatars.githubusercontent.com/u/49417432?s=400&u=af9ff6eddae3945c6eb61b4ee4a8db97b426bf7a&v=4'
+		'https://avatars.githubusercontent.com/u/49417432?s=400&u=af9ff6eddae3945c6eb61b4ee4a8db97b426bf7a&v=4';
 
-	const [theme, setTheme] = useState('/sun.svg')
+	const [theme, setTheme] = useState('/sun.svg');
 
 	function changeTheme() {
-		toggleTheme()
+		toggleTheme();
 
-		setTheme(theme === '/sun.svg' ? '/moon.svg' : '/sun.svg')
+		setTheme(theme === '/sun.svg' ? '/moon.svg' : '/sun.svg');
 	}
 
 	return (
@@ -38,7 +38,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 				<Link href="/tags">[ Tags ]</Link>
 			</div>
 		</StyledHeader>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;

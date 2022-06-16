@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const PostStyled = styled.div`
 	width: 60%;
@@ -52,4 +52,4 @@ export const PostStyled = styled.div`
 	@media (max-width: 530px) {
 		width: 90%;
 	}
-`
+`;

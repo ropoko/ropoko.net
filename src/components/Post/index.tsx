@@ -1,10 +1,10 @@
-import { Posts } from '../../models/Posts'
-import { PostStyled } from './PostStyle'
-import Link from 'next/link'
-import { parse } from 'marked'
+import { Posts } from '../../models/Posts';
+import { PostStyled } from './PostStyle';
+import Link from 'next/link';
+import { parse } from 'marked';
 
 interface Props {
-	post: Posts
+	post: Posts;
 }
 
 const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
@@ -28,7 +28,7 @@ const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
 				></div>
 			</main>
 		</PostStyled>
-	)
-}
+	);
+};
 
-export default Post
+export default Post;

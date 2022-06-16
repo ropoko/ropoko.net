@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ListPostStyle = styled.div`
 	margin: 3rem auto;
@@ -88,4 +88,4 @@ export const ListPostStyle = styled.div`
 			width: 270px;
 		}
 	}
-`
+`;

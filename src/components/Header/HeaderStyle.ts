@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledHeader = styled.div`
 	display: flex;
@@ -35,4 +35,4 @@ export const StyledHeader = styled.div`
 	.menu a:hover {
 		text-decoration: underline;
 	}
-`
+`;
