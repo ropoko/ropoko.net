@@ -4,7 +4,7 @@ import { StyledCountTag } from './CountTagStyle';
 
 export default function CountTag({
 	tags,
-	counter
+	counter,
 }: {
 	tags: string[];
 	counter: { [key: string]: number };

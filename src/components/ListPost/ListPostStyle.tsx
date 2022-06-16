@@ -33,7 +33,7 @@ export const ListPostStyle = styled.div`
 		width: 100%;
 		height: 2.5rem;
 		padding-bottom: 0.8rem;
-		border-bottom: 1px solid ${props => props.theme.colors.separator};
+		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
 	footer .footer-container {
@@ -62,12 +62,12 @@ export const ListPostStyle = styled.div`
 
 		color: #000;
 		border-radius: 5px;
-		background: ${props => props.theme.colors.tags.background};
-		border: ${props => props.theme.colors.tags.border} 1px solid;
+		background: ${(props) => props.theme.colors.tags.background};
+		border: ${(props) => props.theme.colors.tags.border} 1px solid;
 	}
 
 	a {
-		color: ${props => props.theme.colors.highlight};
+		color: ${(props) => props.theme.colors.highlight};
 		transition: font-size 0.2s;
 	}
 

@@ -21,18 +21,18 @@ export const getStaticPaths = async () => {
 	const postDir = path.join(process.cwd(), 'src/posts');
 	const files = fs.readdirSync(postDir);
 
-	const paths = files.map(filename => ({
-		params: { slug: filename.replace('.md', '') }
+	const paths = files.map((filename) => ({
+		params: { slug: filename.replace('.md', '') },
 	}));
 
 	return {
 		paths,
-		fallback: false
+		fallback: false,
 	};
 };
 
 export const getStaticProps = async ({
-	params: { slug }
+	params: { slug },
 }: {
 	params: { slug: string };
 }) => {
@@ -51,12 +51,12 @@ export const getStaticProps = async ({
 		date: data.date,
 		title: data.title,
 		content,
-		tags
+		tags,
 	};
 
 	return {
 		props: {
-			post
-		}
+			post,
+		},
 	};
 };

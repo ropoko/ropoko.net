@@ -13,7 +13,7 @@ export const PostStyled = styled.div`
 		align-items: center;
 		justify-content: space-between;
 
-		color: ${props => props.theme.colors.highlight};
+		color: ${(props) => props.theme.colors.highlight};
 	}
 
 	header a {

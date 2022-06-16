@@ -8,7 +8,7 @@ export default {
 		separator: '#111111',
 		tags: {
 			background: '#ffc0be',
-			border: '#9a1b17'
-		}
-	}
+			border: '#9a1b17',
+		},
+	},
 };

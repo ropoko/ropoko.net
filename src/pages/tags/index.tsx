@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 export default function Tags({
 	tags,
-	counts
+	counts,
 }: {
 	tags: string[];
 	counts: { [key: string]: number };
@@ -28,7 +28,7 @@ export const getStaticProps = async () => {
 
 	const counts: { [key: string]: number } = {};
 
-	files.map(file => {
+	files.map((file) => {
 		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
 
 		const { data } = matter(entireFile);
@@ -45,7 +45,7 @@ export const getStaticProps = async () => {
 	return {
 		props: {
 			tags,
-			counts
-		}
+			counts,
+		},
 	};
 };

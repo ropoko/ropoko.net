@@ -27,7 +27,7 @@ export const getStaticPaths = async () => {
 	const postDir = path.join(process.cwd(), 'src/posts');
 	const files = fs.readdirSync(postDir);
 
-	const tags = files.map(filename => {
+	const tags = files.map((filename) => {
 		const entireFile = fs.readFileSync(path.join(postDir, filename), 'utf-8');
 
 		const { data } = matter(entireFile);
@@ -37,25 +37,25 @@ export const getStaticPaths = async () => {
 
 	const paths = tags.map((tag: string) => {
 		return {
-			params: { tag }
+			params: { tag },
 		};
 	});
 
 	return {
 		paths,
-		fallback: 'blocking'
+		fallback: 'blocking',
 	};
 };
 
 export const getStaticProps = async ({
-	params: { tag }
+	params: { tag },
 }: {
 	params: { tag: string };
 }) => {
 	const postDir = path.join(process.cwd(), 'src/posts');
 	const files = fs.readdirSync(postDir);
 
-	const posts: Posts[] = files.map(file => {
+	const posts: Posts[] = files.map((file) => {
 		const slug: string = file.replace('.md', '');
 
 		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
@@ -70,11 +70,11 @@ export const getStaticProps = async ({
 		return { id, slug, title, date, content, tags };
 	});
 
-	const filteredPosts = posts.filter(post => post.tags.includes(tag[0]));
+	const filteredPosts = posts.filter((post) => post.tags.includes(tag[0]));
 
 	return {
 		props: {
-			posts: filteredPosts
-		}
+			posts: filteredPosts,
+		},
 	};
 };

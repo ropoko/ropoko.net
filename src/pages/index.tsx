@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React from 'react';
 import Head from 'next/head';
 import matter from 'gray-matter';
@@ -15,7 +14,7 @@ export default function Home({ posts }: { posts: Posts[] }) {
 			</Head>
 
 			<main className="posts">
-				{posts.map(post => (
+				{posts.map((post) => (
 					<ListPost post={post} key={post.id} />
 				))}
 			</main>
@@ -27,7 +26,7 @@ export const getStaticProps = async () => {
 	const postDir = path.join(process.cwd(), 'src/posts');
 	const files = fs.readdirSync(postDir);
 
-	const posts: Posts[] = files.map(file => {
+	const posts: Posts[] = files.map((file) => {
 		const slug: string = file.replace('.md', '');
 
 		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
@@ -44,7 +43,7 @@ export const getStaticProps = async () => {
 
 	return {
 		props: {
-			posts
-		}
+			posts,
+		},
 	};
 };
