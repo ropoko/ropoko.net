@@ -24,11 +24,7 @@ Para Resolver esse problema, o bot no discord sempre enviará em um chat determi
 
 Uma vez que estou utilizando a raspberry, posso utilizar o script para instalar.
 
----
- **!! aqui vai ter um codigo**
-
----
-<!-- ```bash
+```bash
 	# baixa o script
 	$ curl -fsSL https://get.docker.com -o get-docker.sh
 
@@ -40,7 +36,7 @@ Uma vez que estou utilizando a raspberry, posso utilizar o script para instalar.
 
 	# verificar que está funcionando
 	$ docker run hello-world
-``` -->
+```
 
 Após rodar os comandos acima, caso não tenha conseguido rodar o hello-world, talvez seja necessário um reboot, caso contrário você deve ter se deparado com essa mensagem mais ou menos:
 

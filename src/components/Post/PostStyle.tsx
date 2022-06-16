@@ -4,6 +4,10 @@ export const PostStyled = styled.div`
 	width: 60%;
 	margin: 2.4rem auto;
 
+	a {
+		display: contents; /* marked isn't collaborating with me */
+	}
+
 	header {
 		display: flex;
 		align-items: center;
