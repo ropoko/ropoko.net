@@ -5,6 +5,7 @@ export default {
 		background: '#111111',
 		text: '#F5F5F5',
 		highlight: '#D7E512',
+		highlightLink: '#E59512',
 		separator: '#F5F5F5',
 		tags: {
 			background: '#f8ff98',

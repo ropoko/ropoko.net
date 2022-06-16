@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
@@ -10,7 +11,11 @@ export default createGlobalStyle`
   body {
     background: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.text};
-    font: 400 16px 'Rajdhani', sans-serif;
+    font: 16px 'Rajdhani', sans-serif;
+
+		${({ theme }) => theme.title === 'light' && `
+			font-weight: 500;
+  	`}
   }
 
   a {

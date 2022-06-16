@@ -4,10 +4,6 @@ export const PostStyled = styled.div`
 	width: 60%;
 	margin: 2.4rem auto;
 
-	a {
-		display: contents; /* marked isn't collaborating with me */
-	}
-
 	header {
 		display: flex;
 		align-items: center;
@@ -30,6 +26,16 @@ export const PostStyled = styled.div`
 		text-align: justify;
 		word-wrap: break-word;
 		font-weight: 500;
+	}
+
+	main a {
+		display: contents; /* marked isn't collaborating with me */
+		color: ${(props) => props.theme.colors.highlight};
+		transition: color 0.2s;
+	}
+
+	main a:hover {
+		color: ${(props) => props.theme.colors.highlightLink};
 	}
 
 	main h1 {

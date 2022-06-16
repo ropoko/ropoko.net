@@ -9,6 +9,7 @@ declare module 'styled-components' {
 			background: string;
 			text: string;
 			highlight: string;
+			highlightLink: string;
 			separator: string;
 			tags: {
 				background: string;
