@@ -13,17 +13,18 @@ export const StyledCountTag = styled.div`
 		width: fit-content;
 		margin: 1rem 1rem 0 0;
 
-		border: 1px solid #646464;
+		border: 1px solid ${(props) => props.theme.colors.tags.border};
 		border-radius: 3px;
-		background: #2c2c2c;
+		background: ${(props) => props.theme.colors.tags.backgroundName};
 
-		p {
-			background: #101010;
+		p.counter {
+			background: ${(props) => props.theme.colors.tags.backgroundCounter};
 		}
 
 		p,
 		strong {
 			padding: 0.4rem;
+			color: ${(props) => props.theme.colors.tags.text};
 		}
 	}
 `;

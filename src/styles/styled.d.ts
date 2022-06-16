@@ -12,8 +12,10 @@ declare module 'styled-components' {
 			highlightLink: string;
 			separator: string;
 			tags: {
-				background: string;
+				backgroundCounter: string;
+				backgroundName: string;
 				border: string;
+				text: string;
 			};
 		};
 	}

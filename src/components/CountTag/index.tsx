@@ -13,7 +13,7 @@ export default function CountTag({
 		<StyledCountTag>
 			{tags.map((tag, index) => (
 				<div key={index}>
-					<p>{counter[tag]}</p>
+					<p className="counter">{counter[tag]}</p>
 					<strong>
 						<Link key={index} href={`tags/${tag}`}>
 							{tag}

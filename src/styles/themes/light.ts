@@ -8,8 +8,10 @@ export default {
 		highlightLink: '#720703',
 		separator: '#111111',
 		tags: {
-			background: '#ffc0be',
+			backgroundCounter: '#F99491',
+			backgroundName: '#ffc0be',
 			border: '#9a1b17',
+			text: '#181717',
 		},
 	},
 };

@@ -60,9 +60,10 @@ export const ListPostStyle = styled.div`
 		padding: 0.2rem;
 		margin: 0 0.2rem;
 
-		color: #000;
+		color: ${(props) => props.theme.colors.tags.text};
+		font-weight: 600;
 		border-radius: 5px;
-		background: ${(props) => props.theme.colors.tags.background};
+		background: ${(props) => props.theme.colors.tags.backgroundName};
 		border: ${(props) => props.theme.colors.tags.border} 1px solid;
 	}
 
