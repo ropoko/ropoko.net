@@ -23,13 +23,11 @@ export const PostStyled = styled.div`
 	main {
 		margin: 1.6rem 0;
 		font-size: 1.1em;
-		text-align: justify;
 		word-wrap: break-word;
 		font-weight: 500;
 	}
 
 	main a {
-		display: contents; /* marked isn't collaborating with me */
 		color: ${(props) => props.theme.colors.highlight};
 		transition: color 0.2s;
 	}
@@ -44,7 +42,7 @@ export const PostStyled = styled.div`
 	}
 
 	main p {
-		display: flex;
+		text-align: justify;
 		margin-bottom: 1rem;
 	}
 
@@ -53,6 +51,15 @@ export const PostStyled = styled.div`
 		height: 100%;
 		max-width: 25rem;
 		margin: 1rem auto;
+	}
+
+	main pre {
+		width: 100%;
+		overflow-x: auto;
+		margin-bottom: 1rem;
+		padding: 1rem 0;
+		border-top: 1px solid ${(props) => props.theme.colors.separator};
+		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
 	@media (max-width: 530px) {
