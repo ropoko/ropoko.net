@@ -12,6 +12,11 @@ export const ListPostStyle = styled.div`
 		font-size: 3rem;
 	}
 
+	a {
+		color: ${(props) => props.theme.colors.highlight};
+		transition: font-size 0.2s;
+	}
+
 	header {
 		display: flex;
 		align-items: center;
@@ -31,8 +36,8 @@ export const ListPostStyle = styled.div`
 
 	footer {
 		width: 100%;
-		height: 2.5rem;
-		padding-bottom: 0.8rem;
+		height: 2.8rem;
+		overflow-x: auto;
 		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
@@ -50,12 +55,6 @@ export const ListPostStyle = styled.div`
 		margin-right: 40px;
 	}
 
-	footer .tags {
-		overflow-x: clip;
-		white-space: nowrap;
-		text-overflow: clip;
-	}
-
 	footer .tags a {
 		padding: 0.2rem;
 		margin: 0 0.2rem;
@@ -65,11 +64,6 @@ export const ListPostStyle = styled.div`
 		border-radius: 5px;
 		background: ${(props) => props.theme.colors.tags.backgroundName};
 		border: ${(props) => props.theme.colors.tags.border} 1px solid;
-	}
-
-	a {
-		color: ${(props) => props.theme.colors.highlight};
-		transition: font-size 0.2s;
 	}
 
 	@media (max-width: 1080px) {
