@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledCountTag = styled.div`
+export const CountTagStyled = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export const PostStyled = styled.div`
+export const PostStyle = styled.div`
 	width: 60%;
-	margin: 2.4rem auto;
+	margin: 2.4rem 0 2.4rem 20rem;
 
 	header {
 		display: flex;

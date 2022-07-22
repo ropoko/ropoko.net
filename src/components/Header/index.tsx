@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledHeader } from './HeaderStyle';
+import { HeaderStyle } from './HeaderStyle';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -20,7 +20,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 	}
 
 	return (
-		<StyledHeader>
+		<HeaderStyle>
 			<div className="theme-switch">
 				<Link href="/" passHref>
 					<a>
@@ -37,7 +37,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 				<Link href="/about">[ About me ]</Link>
 				<Link href="/tags">[ Tags ]</Link>
 			</div>
-		</StyledHeader>
+		</HeaderStyle>
 	);
 };
 

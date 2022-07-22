@@ -24,19 +24,19 @@ Para Resolver esse problema, o bot no discord sempre enviará em um chat determi
 
 Uma vez que estou utilizando a raspberry, posso utilizar o script para instalar.
 
-```bash
-# baixa o script
-$ curl -fsSL https://get.docker.com -o get-docker.sh
+<code>
+	# baixa o script
+	$ curl -fsSL https://get.docker.com -o get-docker.sh
 
-# roda o script
-$ sudo sh get-docker.sh
+	# roda o script
+	$ sudo sh get-docker.sh
 
-# adiciona o usuário (no caso - pi) ao grupo do docker
-$ sudo usermod -aG docker pi
+	# adiciona o usuário (no caso - pi) ao grupo do docker
+	$ sudo usermod -aG docker pi
 
-# verificar que está funcionando
-$ docker run hello-world
-```
+	# verificar que está funcionando
+	$ docker run hello-world
+</code>
 
 Após rodar os comandos acima, caso não tenha conseguido rodar o hello-world, talvez seja necessário um reboot, caso contrário você deve ter se deparado com essa mensagem mais ou menos:
 

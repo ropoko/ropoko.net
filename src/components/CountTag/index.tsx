@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import { StyledCountTag } from './CountTagStyle';
+import { CountTagStyled } from './CountTagStyle';
 
 export default function CountTag({
 	tags,
@@ -10,7 +10,7 @@ export default function CountTag({
 	counter: { [key: string]: number };
 }) {
 	return (
-		<StyledCountTag>
+		<CountTagStyled>
 			{tags.map((tag, index) => (
 				<div key={index}>
 					<p className="counter">{counter[tag]}</p>
@@ -21,6 +21,6 @@ export default function CountTag({
 					</strong>
 				</div>
 			))}
-		</StyledCountTag>
+		</CountTagStyled>
 	);
 }

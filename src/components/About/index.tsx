@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyledAbout } from './AboutStyle';
+import { AboutStyle } from './AboutStyle';
 
 export default function About() {
 	return (
-		<StyledAbout>
+		<AboutStyle>
 			<h1>Oi, meu nome é Rodrigo!</h1>
 			<section className="introduction">
 				<p>sou estudante, atualmente cursando ciência da computação.</p>
@@ -18,6 +18,6 @@ export default function About() {
 					<h2>Estudo</h2>
 				</section>
 			</div> */}
-		</StyledAbout>
+		</AboutStyle>
 	);
 }
