@@ -16,7 +16,9 @@ const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
 			<PostStyle>
 				<header>
 					<Link href="/">[ Go back ]</Link>
-					<p>Posted on {post.date}</p>
+					<p>
+						Posted on <time>{post.date}</time>
+					</p>
 				</header>
 				<main>
 					<h1>{post.title}</h1>
