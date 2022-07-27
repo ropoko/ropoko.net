@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Posts } from '../../models/Posts';
 import { NavHeadingStyle } from './NavHeadingStyle';
 import DOMPurify from 'isomorphic-dompurify';
-import { useTheme } from 'styled-components';
+import ButtonPin from '../ButtonPin';
+import { NavHeadingsContext } from '../../contexts/NavHeadingsContext';
 
 export default function NavHeading({ post }: { post: Posts }) {
 	const getHeadings = (post: Posts): string => {
@@ -32,15 +33,13 @@ export default function NavHeading({ post }: { post: Posts }) {
 		return DOMPurify.sanitize(html, { SANITIZE_DOM: true });
 	};
 
-	const currentTheme = useTheme();
+	const { pinned } = useContext(NavHeadingsContext);
 
 	return (
-		<NavHeadingStyle>
+		<NavHeadingStyle state={pinned}>
 			<header>
 				<strong>Headings </strong>
-				<button>
-					<img src={currentTheme.img.pin} alt="pin" />
-				</button>
+				<ButtonPin />
 			</header>
 			<section
 				dangerouslySetInnerHTML={{

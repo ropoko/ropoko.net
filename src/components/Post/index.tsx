@@ -3,6 +3,7 @@ import { PostStyle } from './PostStyle';
 import Link from 'next/link';
 import { marked } from 'marked';
 import NavHeading from '../NavHeading';
+import { NavHeadingsContextProvider } from '../../contexts/NavHeadingsContext';
 
 interface Props {
 	post: Posts;
@@ -10,7 +11,7 @@ interface Props {
 
 const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
 	return (
-		<>
+		<NavHeadingsContextProvider>
 			<NavHeading post={post} />
 			<PostStyle>
 				<header>
@@ -31,7 +32,7 @@ const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
 					></div>
 				</main>
 			</PostStyle>
-		</>
+		</NavHeadingsContextProvider>
 	);
 };
 

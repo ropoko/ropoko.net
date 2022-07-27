@@ -62,6 +62,10 @@ export const PostStyle = styled.div`
 		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
+	@media (max-width: 780px) {
+		margin: 2.4rem auto;
+	}
+
 	@media (max-width: 530px) {
 		width: 90%;
 	}
