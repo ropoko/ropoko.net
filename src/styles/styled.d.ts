@@ -18,5 +18,9 @@ declare module 'styled-components' {
 				text: string;
 			};
 		};
+
+		img: {
+			pin: string;
+		};
 	}
 }

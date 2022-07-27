@@ -2,6 +2,7 @@ import React from 'react';
 import { Posts } from '../../models/Posts';
 import { NavHeadingStyle } from './NavHeadingStyle';
 import DOMPurify from 'isomorphic-dompurify';
+import { useTheme } from 'styled-components';
 
 export default function NavHeading({ post }: { post: Posts }) {
 	const getHeadings = (post: Posts): string => {
@@ -31,9 +32,16 @@ export default function NavHeading({ post }: { post: Posts }) {
 		return DOMPurify.sanitize(html, { SANITIZE_DOM: true });
 	};
 
+	const currentTheme = useTheme();
+
 	return (
 		<NavHeadingStyle>
-			<strong>Headings </strong>
+			<header>
+				<strong>Headings </strong>
+				<button>
+					<img src={currentTheme.img.pin} alt="pin" />
+				</button>
+			</header>
 			<section
 				dangerouslySetInnerHTML={{
 					__html: getHeadings(post),

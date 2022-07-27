@@ -14,4 +14,7 @@ export default {
 			text: '#111111',
 		},
 	},
+	img: {
+		pin: '/pin-white.png',
+	},
 };
