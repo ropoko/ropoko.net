@@ -5,6 +5,9 @@ import { marked } from 'marked';
 import NavHeading from '../NavHeading';
 import { NavHeadingsContextProvider } from '../../contexts/NavHeadingsContext';
 
+import hljs from 'highlight.js';
+import 'highlight.js/styles/monokai-sublime.css';
+
 interface Props {
 	post: Posts;
 }
@@ -25,10 +28,22 @@ const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
 					<div
 						dangerouslySetInnerHTML={{
 							__html: marked(post.content, {
+								renderer: new marked.Renderer(),
+								highlight: function (code, lang) {
+									const hightlight = hljs;
+									const language = hightlight.getLanguage(lang)
+										? lang
+										: 'plaintext';
+									return hljs.highlight(code, { language }).value;
+								},
+								langPrefix: 'hljs lang-',
 								gfm: true,
 								mangle: true,
 								smartLists: true,
 								smartypants: true,
+								pedantic: false,
+								breaks: false,
+								xhtml: false,
 							}),
 						}}
 					></div>

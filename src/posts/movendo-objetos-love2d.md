@@ -83,6 +83,7 @@ function love.update()
 	PLAYER.y = PLAYER.y + (y_distance * speed)
 end
 ```
+
 > Note que nao alteramos a funcao love.draw()
 
 ## Resultado

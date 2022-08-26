@@ -58,8 +58,6 @@ export const PostStyle = styled.div`
 		overflow-x: auto;
 		margin-bottom: 1rem;
 		padding: 1rem 0;
-		border-top: 1px solid ${(props) => props.theme.colors.separator};
-		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
 	@media (max-width: 780px) {
