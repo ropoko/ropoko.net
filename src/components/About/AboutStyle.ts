@@ -10,6 +10,14 @@ export const AboutStyle = styled.div`
 		line-height: 3;
 	}
 
+	a {
+		color: ${(props) => props.theme.colors.highlight};
+	}
+
+	p {
+		margin-top: 1rem;
+	}
+
 	.introduction::after {
 		content: '';
 		display: block;
@@ -19,12 +27,17 @@ export const AboutStyle = styled.div`
 		transform: translateX(-10px);
 	}
 
-	.content {
+	.grid-content {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+		gap: 8rem;
+		padding: 2rem;
 	}
 
-	.content section {
-		border: 1px solid red;
+	@media (max-width: 550px) {
+		.grid-content {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
 	}
 `;
