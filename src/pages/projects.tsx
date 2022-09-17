@@ -1,7 +1,8 @@
 import React from 'react';
+import Projects from '../components/Projects';
 
 const ProjectsPage = () => {
-	return <h1> oi </h1>;
+	return <Projects></Projects>;
 };
 
 export default ProjectsPage;
