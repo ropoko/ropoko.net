@@ -3,7 +3,8 @@ import { ProjectsStyle } from './ProjectsStyle';
 const Projects = () => {
 	return (
 		<ProjectsStyle>
-			<h1>aspiodkpaso</h1>
+			<h1>work in progress...</h1>
+			<progress></progress>
 		</ProjectsStyle>
 	);
 };
