@@ -18,12 +18,14 @@ export default function About() {
 					</p>
 					<p>
 						Tenho experiência com Python em um projeto no qual utilizei para
-						automação logística com uma raspberry pi. Nesse projeto embora
-						também tenha dado bastante manutenção na parte de controle das
-						portas seriais, fui o responsável pela interface web (utilizando
-						Flask) para atualizar um dashboard conforme a ação que ocorria nas
-						portas seriais, para que houvesse essa atualização do dashboard em
-						tempo real, utilizei o mqtt.
+						automação logística com uma raspberry pi.
+					</p>
+					<p>
+						Nesse projeto embora também tenha dado bastante manutenção na parte
+						de controle das portas seriais, fui o responsável pela interface web
+						(utilizando Flask) para atualizar um dashboard conforme a ação que
+						ocorria nas portas seriais, para que houvesse essa atualização do
+						dashboard em tempo real, utilizei o mqtt.
 					</p>
 					<p>
 						Também com python, sou responsável pelo projeto open source

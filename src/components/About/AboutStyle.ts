@@ -39,5 +39,15 @@ export const AboutStyle = styled.div`
 			grid-template-columns: 1fr;
 			gap: 2rem;
 		}
+
+		.introduction p {
+			line-height: 1;
+			margin: 1rem 0;
+		}
+
+		.introduction::after {
+			width: 80%;
+			transform: translateX(0);
+		}
 	}
 `;

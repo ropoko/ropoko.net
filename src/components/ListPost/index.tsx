@@ -8,7 +8,7 @@ export default function ListPost({ post }: { post: Posts }) {
 		<ListPostStyle>
 			<header>
 				<section>
-					<h1>{post.title}</h1>
+					<h1 title={post.title}>{post.title}</h1>
 				</section>
 				<em>Posted on {post.date}</em>
 			</header>
@@ -19,7 +19,7 @@ export default function ListPost({ post }: { post: Posts }) {
 					<section className="tags">
 						<div className="aux-tags">
 							{post.tags.map((tag) => (
-								<a key={tag} href={`/tags/${tag}`}>
+								<a title={tag} key={tag} href={`/tags/${tag}`}>
 									{tag}
 								</a>
 							))}
