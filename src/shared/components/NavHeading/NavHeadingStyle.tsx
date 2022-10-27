@@ -1,28 +1,15 @@
 import styled from 'styled-components';
-import { PinState } from '../../../shared/types/pin-state.type';
 
-export const NavHeadingStyle = styled.aside<PinState>`
+export const NavHeadingStyle = styled.aside`
 	background: ${(props) => props.theme.colors.background};
-	width: 15rem;
+	max-width: 20rem;
 	height: auto;
 	position: fixed;
 	top: 20%;
 	font-size: 1.2rem;
-	padding: 1rem;
-	color: ${(props) => props.theme.colors.highlight};
-	border: 1px solid ${(props) => props.theme.colors.separator};
+	padding: 1rem 0;
 
 	overflow: hidden;
-
-	// pin
-	${({ state }) =>
-		state === true
-			? `
-		visibility: visible;
-  `
-			: `
-		visibility: hidden;
-	`}
 
 	header {
 		position: relative;
@@ -32,6 +19,14 @@ export const NavHeadingStyle = styled.aside<PinState>`
 
 		padding: 0 0 0.3rem 0;
 		border-bottom: 1px solid ${(props) => props.theme.colors.highlight};
+	}
+
+	strong {
+		margin-left: 1rem;
+	}
+
+	li:hover {
+		color: ${(props) => props.theme.colors.highlight};
 	}
 
 	@media (max-width: 780px) {

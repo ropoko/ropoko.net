@@ -1,8 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavHeadingStyle } from './NavHeadingStyle';
 import DOMPurify from 'isomorphic-dompurify';
-import ButtonPin from '../ButtonPin';
-import { NavHeadingsContext } from '../../contexts/NavHeadingsContext';
 import { Post } from '../../types/post.type';
 
 export default function NavHeading({ post }: { post: Post }) {
@@ -33,14 +31,9 @@ export default function NavHeading({ post }: { post: Post }) {
 		return DOMPurify.sanitize(html, { SANITIZE_DOM: true });
 	};
 
-	const { pinned } = useContext(NavHeadingsContext);
-
 	return (
-		<NavHeadingStyle state={pinned}>
-			<header>
-				<strong>Headings </strong>
-				<ButtonPin />
-			</header>
+		<NavHeadingStyle>
+			<strong>Headings</strong>
 			<section
 				dangerouslySetInnerHTML={{
 					__html: getHeadings(post),

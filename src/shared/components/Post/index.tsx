@@ -3,7 +3,6 @@ import { PostStyle } from './PostStyle';
 import Link from 'next/link';
 import { marked } from 'marked';
 import NavHeading from '../NavHeading';
-import { NavHeadingsContextProvider } from '../../contexts/NavHeadingsContext';
 
 import hljs from 'highlight.js';
 import 'highlight.js/styles/monokai-sublime.css';
@@ -14,13 +13,18 @@ interface Props {
 
 const Post: React.FC<Props> = ({ post }: { post: PostType }) => {
 	return (
-		<NavHeadingsContextProvider>
+		<>
 			<NavHeading post={post} />
 			<PostStyle>
 				<header>
 					<Link href="/">[ Go back ]</Link>
 					<p>
 						Posted on <time>{post.date}</time>
+						{post.updated && (
+							<p>
+								| Updated <time>{post.updated}</time>
+							</p>
+						)}
 					</p>
 				</header>
 				<main>
@@ -49,7 +53,7 @@ const Post: React.FC<Props> = ({ post }: { post: PostType }) => {
 					></div>
 				</main>
 			</PostStyle>
-		</NavHeadingsContextProvider>
+		</>
 	);
 };
 
