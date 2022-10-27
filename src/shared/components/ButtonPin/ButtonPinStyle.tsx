@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PinState } from '../../models/PinState';
+import { PinState } from '../../../shared/types/pin-state.type';
 
 export const ButtonPinStyle = styled.button<PinState>`
 	background: transparent;

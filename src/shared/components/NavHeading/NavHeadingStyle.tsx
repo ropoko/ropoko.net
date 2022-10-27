@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { PinState } from '../../models/PinState';
+import { PinState } from '../../../shared/types/pin-state.type';
 
 export const NavHeadingStyle = styled.aside<PinState>`
 	background: ${(props) => props.theme.colors.background};

@@ -1,8 +1,13 @@
 import React from 'react';
-import Projects from '../components/Projects';
+import { ProjectsStyle } from '../styles/pages/projects-style';
 
 const ProjectsPage = () => {
-	return <Projects></Projects>;
+	return (
+		<ProjectsStyle>
+			<h1>work in progress...</h1>
+			<progress></progress>
+		</ProjectsStyle>
+	);
 };
 
 export default ProjectsPage;

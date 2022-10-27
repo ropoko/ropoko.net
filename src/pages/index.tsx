@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import ListPost from '../components/ListPost';
 import { Utils } from '../shared/utils';
 import { Post } from '../shared/types/post.type';
+import ListPost from '../shared/components/ListPost';
 
 const Home = ({ posts }: { posts: Post[] }) => {
 	return (

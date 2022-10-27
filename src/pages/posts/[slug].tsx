@@ -1,12 +1,10 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { Posts } from '../../models/Posts';
-import Post from '../../components/Post';
 import Head from 'next/head';
+import { Post as PostType } from '../../shared/types/post.type';
+import Post from '../../shared/components/Post';
+import { Utils } from '../../shared/utils';
 
-export default function PostPage({ post }: { post: Posts }) {
+export default function PostPage({ post }: { post: PostType }) {
 	return (
 		<>
 			<Head>
@@ -18,12 +16,15 @@ export default function PostPage({ post }: { post: Posts }) {
 }
 
 export const getStaticPaths = async () => {
-	const postDir = path.join(process.cwd(), 'src/posts');
-	const files = fs.readdirSync(postDir);
+	const posts = Utils.getPosts();
 
-	const paths = files.map((filename) => ({
-		params: { slug: filename.replace('.md', '') },
-	}));
+	const paths = posts.map((post) => {
+		return {
+			params: {
+				slug: post.slug.replace('.md', ''),
+			},
+		};
+	});
 
 	return {
 		paths,
@@ -36,23 +37,7 @@ export const getStaticProps = async ({
 }: {
 	params: { slug: string };
 }) => {
-	const postDir = path.join(process.cwd(), 'src/posts');
-
-	const entireFile = fs.readFileSync(path.join(postDir, `${slug}.md`), 'utf-8');
-
-	const { data, content } = matter(entireFile);
-
-	const id: number = data.id;
-	const tags: string[] = data.tags;
-
-	const post: Posts = {
-		id,
-		slug,
-		date: data.date,
-		title: data.title,
-		content,
-		tags,
-	};
+	const post = Utils.getPost(slug);
 
 	return {
 		props: {

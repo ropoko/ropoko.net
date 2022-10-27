@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ListPostStyle } from './ListPostStyle';
-import { Post } from '../../shared/types/post.type';
+import { Post } from '../../../shared/types/post.type';
 
 export default function ListPost({ post }: { post: Post }) {
 	return (

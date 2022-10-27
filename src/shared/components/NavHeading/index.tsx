@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { Posts } from '../../models/Posts';
 import { NavHeadingStyle } from './NavHeadingStyle';
 import DOMPurify from 'isomorphic-dompurify';
 import ButtonPin from '../ButtonPin';
 import { NavHeadingsContext } from '../../contexts/NavHeadingsContext';
+import { Post } from '../../types/post.type';
 
-export default function NavHeading({ post }: { post: Posts }) {
-	const getHeadings = (post: Posts): string => {
+export default function NavHeading({ post }: { post: Post }) {
+	const getHeadings = (post: Post): string => {
 		const content: string = post.content;
 		const lines = content.split('\n');
 

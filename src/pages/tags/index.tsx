@@ -2,16 +2,16 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import CountTag from '../../components/CountTag';
 import Head from 'next/head';
+import CountTag from '../../shared/components/CountTag';
 
-export default function Tags({
+const Tags = ({
 	tags,
 	counts,
 }: {
 	tags: string[];
 	counts: { [key: string]: number };
-}) {
+}) => {
 	return (
 		<>
 			<Head>
@@ -20,7 +20,9 @@ export default function Tags({
 			<CountTag tags={tags} counter={counts} />
 		</>
 	);
-}
+};
+
+export default Tags;
 
 export const getStaticProps = async () => {
 	const postDir = path.join(process.cwd(), 'src/posts');

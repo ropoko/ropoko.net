@@ -1,4 +1,4 @@
-import { Posts } from '../../models/Posts';
+import { Post as PostType } from '../../../shared/types/post.type';
 import { PostStyle } from './PostStyle';
 import Link from 'next/link';
 import { marked } from 'marked';
@@ -9,10 +9,10 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/monokai-sublime.css';
 
 interface Props {
-	post: Posts;
+	post: PostType;
 }
 
-const Post: React.FC<Props> = ({ post }: { post: Posts }) => {
+const Post: React.FC<Props> = ({ post }: { post: PostType }) => {
 	return (
 		<NavHeadingsContextProvider>
 			<NavHeading post={post} />

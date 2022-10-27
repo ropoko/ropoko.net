@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 
 import dark from '../styles/themes/dark';
 import light from '../styles/themes/light';
-import Header from '../components/Header';
+import Header from '../shared/components/Header';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
 	const [theme, setTheme] = useState(dark);

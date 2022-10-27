@@ -1,11 +1,9 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
-import { Posts } from '../../models/Posts';
-import ListPost from '../../components/ListPost';
+import { Post } from '../../shared/types/post.type';
+import { Utils } from '../../shared/utils';
+import ListPost from '../../shared/components/ListPost';
 
-export default function Tag({ posts }: { posts: Posts[] }) {
+const Tag = ({ posts }: { posts: Post[] }) => {
 	if (posts !== undefined && posts.length > 0) {
 		return (
 			<div>
@@ -21,24 +19,19 @@ export default function Tag({ posts }: { posts: Posts[] }) {
 			</div>
 		);
 	}
-}
+};
+
+export default Tag;
 
 export const getStaticPaths = async () => {
-	const postDir = path.join(process.cwd(), 'src/posts');
-	const files = fs.readdirSync(postDir);
+	const posts = Utils.getPosts();
 
-	const tags = files.map((filename) => {
-		const entireFile = fs.readFileSync(path.join(postDir, filename), 'utf-8');
-
-		const { data } = matter(entireFile);
-
-		return data.tags;
-	});
+	const tags = posts.flatMap((post) => post.tags);
 
 	const paths = tags.map((tag: string) => {
-		return {
-			params: { tag },
-		};
+		{
+			tag;
+		}
 	});
 
 	return {
@@ -52,23 +45,7 @@ export const getStaticProps = async ({
 }: {
 	params: { tag: string };
 }) => {
-	const postDir = path.join(process.cwd(), 'src/posts');
-	const files = fs.readdirSync(postDir);
-
-	const posts: Posts[] = files.map((file) => {
-		const slug: string = file.replace('.md', '');
-
-		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
-
-		const { data, content } = matter(entireFile);
-
-		const title: string = data.title;
-		const date: string = data.date;
-		const id: number = data.id;
-		const tags: string[] = data.tags;
-
-		return { id, slug, title, date, content, tags };
-	});
+	const posts = Utils.getPosts();
 
 	const filteredPosts = posts.filter((post) => post.tags.includes(tag[0]));
 

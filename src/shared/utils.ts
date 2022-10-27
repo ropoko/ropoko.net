@@ -28,4 +28,12 @@ export class Utils {
 
 		return posts;
 	}
+
+	static getPost(slug: string): Post {
+		const posts = this.getPosts();
+
+		const post = posts.filter((post) => post.slug === slug);
+
+		return post[0];
+	}
 }
