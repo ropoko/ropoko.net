@@ -1,24 +1,28 @@
 import React from 'react';
 import Link from 'next/link';
-import { Posts } from '../../models/Posts';
 import { ListPostStyle } from './ListPostStyle';
+import { Post } from '../../shared/types/post.type';
 
-export default function ListPost({ post }: { post: Posts }) {
+export default function ListPost({ post }: { post: Post }) {
 	return (
 		<ListPostStyle>
 			<header>
 				<section>
-					<h1 title={post.title}>{post.title}</h1>
+					<Link href={`/posts/${post.slug}`}>
+						<h1 title={post.title}>{post.title}</h1>
+					</Link>
 				</section>
-				<em>Posted on {post.date}</em>
+				<div className="dates">
+					<em>Posted on {post.date}</em>
+					{post.updated && <em>Updated {post.updated}</em>}
+				</div>
 			</header>
 
 			<footer>
 				<div className="footer-container">
-					<Link href={`/posts/${post.slug}`}> [ Read more ] </Link>
 					<section className="tags">
 						<div className="aux-tags">
-							{post.tags.map((tag) => (
+							{post.tags.map((tag: string) => (
 								<a title={tag} key={tag} href={`/tags/${tag}`}>
 									{tag}
 								</a>

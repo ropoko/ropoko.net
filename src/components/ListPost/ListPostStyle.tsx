@@ -6,10 +6,14 @@ export const ListPostStyle = styled.div`
 	min-width: 360px;
 	max-width: 95%;
 
-	padding: 0 0.5rem;
-
 	h1 {
 		font-size: 3rem;
+	}
+
+	h1:hover {
+		color: ${(props) => props.theme.colors.highlight};
+		text-decoration: underline;
+		cursor: pointer;
 	}
 
 	a {
@@ -38,7 +42,6 @@ export const ListPostStyle = styled.div`
 		width: 100%;
 		height: 2.8rem;
 		overflow-x: auto;
-		border-bottom: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
 	footer .footer-container {

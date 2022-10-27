@@ -1,12 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import matter from 'gray-matter';
-import fs from 'fs';
 import ListPost from '../components/ListPost';
-import { Posts } from '../models/Posts';
-import path from 'path';
+import { Utils } from '../shared/utils';
+import { Post } from '../shared/types/post.type';
 
-export default function Home({ posts }: { posts: Posts[] }) {
+const Home = ({ posts }: { posts: Post[] }) => {
 	return (
 		<div>
 			<Head>
@@ -14,36 +12,20 @@ export default function Home({ posts }: { posts: Posts[] }) {
 			</Head>
 
 			<main className="posts">
-				{posts.map((post) => (
-					<ListPost post={post} key={post.id} />
+				{posts.map((post, i) => (
+					<ListPost post={post} key={i} />
 				))}
 			</main>
 		</div>
 	);
-}
+};
+
+export default Home;
 
 export const getStaticProps = async () => {
-	const postDir = path.join(process.cwd(), 'src/posts');
-	const files = fs.readdirSync(postDir);
-
-	const posts: Posts[] = files.map((file) => {
-		const slug: string = file.replace('.md', '');
-
-		const entireFile = fs.readFileSync(path.join(postDir, file), 'utf-8');
-
-		const { data, content } = matter(entireFile);
-
-		const title: string = data.title;
-		const date: string = data.date;
-		const id: number = data.id;
-		const tags: string[] = data.tags;
-
-		return { id, slug, title, date, content, tags };
-	});
-
 	return {
 		props: {
-			posts,
+			posts: Utils.getPosts(),
 		},
 	};
 };
