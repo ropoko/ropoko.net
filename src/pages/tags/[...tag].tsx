@@ -26,12 +26,12 @@ export default Tag;
 export const getStaticPaths = async () => {
 	const posts = Utils.getPosts();
 
-	const tags = posts.flatMap((post) => post.tags);
+	const tags = posts.map((post) => post.tags);
 
-	const paths = tags.map((tag: string) => {
-		{
-			tag;
-		}
+	const paths = tags.map((tag) => {
+		return {
+			params: { tag },
+		};
 	});
 
 	return {
