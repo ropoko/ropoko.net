@@ -1,5 +1,4 @@
 ---
-id: 3
 title: '# Devlog 1 - Wild League'
 date: '25/10/2022'
 tags: ['gamedev', 'wild-league', 'devlog']

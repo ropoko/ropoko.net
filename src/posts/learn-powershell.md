@@ -1,5 +1,4 @@
 ---
-id: 2
 title: Starting with powershell
 date: '23/09/2022'
 tags: ['powershell', 'shell', 'terminal']

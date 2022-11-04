@@ -1,5 +1,4 @@
 ---
-id: 3
 title: Why V
 date: '23/09/2022'
 tags: ['vlang', 'programming']
