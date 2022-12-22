@@ -4,6 +4,10 @@ import DOMPurify from 'isomorphic-dompurify';
 import { Post } from '../../types/post.type';
 
 export default function NavHeading({ post }: { post: Post }) {
+	const hasHeadings = () => {
+		return getHeadings(post) !== '<ul></ul>';
+	};
+
 	const getHeadings = (post: Post): string => {
 		const content: string = post.content;
 		const lines = content.split('\n');
@@ -32,13 +36,17 @@ export default function NavHeading({ post }: { post: Post }) {
 	};
 
 	return (
-		<NavHeadingStyle>
-			<strong>Headings</strong>
-			<section
-				dangerouslySetInnerHTML={{
-					__html: getHeadings(post),
-				}}
-			></section>
-		</NavHeadingStyle>
+		<>
+			{hasHeadings() && (
+				<NavHeadingStyle>
+					<strong>Headings</strong>
+					<section
+						dangerouslySetInnerHTML={{
+							__html: getHeadings(post),
+						}}
+					></section>
+				</NavHeadingStyle>
+			)}
+		</>
 	);
 }

@@ -11,16 +11,20 @@ export default function CountTag({
 }) {
 	return (
 		<CountTagStyled>
-			{tags.map((tag, index) => (
-				<div key={index}>
-					<p className="counter">{counter[tag]}</p>
-					<strong>
-						<Link key={index} href={`tags/${tag}`}>
-							{tag}
-						</Link>
-					</strong>
-				</div>
-			))}
+			<ul>
+				{tags.map((tag, index) => (
+					<li>
+						<div key={index}>
+							<p className="counter">{counter[tag]}</p>
+							<strong>
+								<Link key={index} href={`tags/${tag}`}>
+									{tag}
+								</Link>
+							</strong>
+						</div>
+					</li>
+				))}
+			</ul>
 		</CountTagStyled>
 	);
 }

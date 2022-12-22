@@ -49,7 +49,6 @@ export const PostStyle = styled.div`
 	main p img {
 		width: 100%;
 		height: 100%;
-		max-width: 25rem;
 		margin: 1rem auto;
 	}
 

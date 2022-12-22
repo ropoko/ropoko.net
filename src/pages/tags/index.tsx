@@ -4,6 +4,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import Head from 'next/head';
 import CountTag from '../../shared/components/CountTag';
+import { TagStyle } from '../../styles/pages/tag-style';
 
 const Tags = ({
 	tags,
@@ -17,7 +18,9 @@ const Tags = ({
 			<Head>
 				<title>Ropoko | Tags</title>
 			</Head>
-			<CountTag tags={tags} counter={counts} />
+			<TagStyle>
+				<CountTag tags={tags} counter={counts} />
+			</TagStyle>
 		</>
 	);
 };

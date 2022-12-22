@@ -15,7 +15,7 @@ const Tag = ({ posts }: { posts: Post[] }) => {
 	} else {
 		return (
 			<div>
-				<h3> Nao foi possivel encontrar nenhum post :P</h3>
+				<h3> Couldn't find any post with this tag :P</h3>
 			</div>
 		);
 	}
