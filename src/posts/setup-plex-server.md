@@ -2,7 +2,7 @@
 title: 'Setting up Plex Media Server Linux'
 date: '21/12/2022'
 updated: '30/12/2022'
-tags: ['plex', 'media server', 'linux']
+tags: ['plex', 'media server', 'linux', 'raspberry']
 ---
 
 In this "tutorial", I'll show how to create a plex server on different linux distributions (my main ones), this will be more a todo list for me remember in the future.
