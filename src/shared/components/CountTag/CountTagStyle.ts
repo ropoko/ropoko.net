@@ -34,10 +34,4 @@ export const CountTagStyled = styled.div`
 			columns: 2;
 		}
 	}
-
-	@media (max-width: 530px) {
-		ul {
-			columns: 1;
-		}
-	}
 `;
