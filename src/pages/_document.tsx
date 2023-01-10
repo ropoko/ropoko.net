@@ -34,9 +34,22 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<meta name="reply-to" content="rodrigostramantinoli@gmail.com" />
+					<meta
+						name="author"
+						content="Ropoko, rodrigostramantinoli@gmail.com"
+					/>
 					<meta
 						name="description"
 						content="Personal blog where you'll see posts and tutorials"
+					/>
+					<meta
+						name="keywords"
+						content="Personal, Blog, Tech, JavaScript, Lua, CSS, HTML"
+					/>
+					<meta
+						name="subject"
+						content="Personal thoughts about tech and other stuff"
 					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
