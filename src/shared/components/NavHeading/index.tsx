@@ -3,7 +3,7 @@ import { NavHeadingStyle } from './NavHeadingStyle';
 import DOMPurify from 'isomorphic-dompurify';
 import { Post } from '../../types/post.type';
 
-export default function NavHeading({ post }: { post: Post }) {
+const NavHeading = ({ post }: { post: Post }) => {
 	const hasHeadings = () => {
 		return getHeadings(post) !== '<ul></ul>';
 	};
@@ -49,4 +49,6 @@ export default function NavHeading({ post }: { post: Post }) {
 			)}
 		</>
 	);
-}
+};
+
+export default NavHeading;

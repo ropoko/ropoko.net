@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const ProjectsStyle = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
+	width: 75%;
+	margin: 2rem auto;
+
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 1fr;
+
+	padding: 2rem;
 `;

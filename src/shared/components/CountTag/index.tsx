@@ -2,13 +2,13 @@ import Link from 'next/link';
 import React from 'react';
 import { CountTagStyled } from './CountTagStyle';
 
-export default function CountTag({
+const CountTag = ({
 	tags,
 	counter,
 }: {
 	tags: string[];
 	counter: { [key: string]: number };
-}) {
+}) => {
 	return (
 		<CountTagStyled>
 			<ul>
@@ -27,4 +27,6 @@ export default function CountTag({
 			</ul>
 		</CountTagStyled>
 	);
-}
+};
+
+export default CountTag;

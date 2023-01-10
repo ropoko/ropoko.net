@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ListPostStyle } from './ListPostStyle';
 import { Post } from '../../../shared/types/post.type';
 
-export default function ListPost({ post }: { post: Post }) {
+const ListPost = ({ post }: { post: Post }) => {
 	return (
 		<ListPostStyle>
 			<header>
@@ -33,4 +33,6 @@ export default function ListPost({ post }: { post: Post }) {
 			</footer>
 		</ListPostStyle>
 	);
-}
+};
+
+export default ListPost;
