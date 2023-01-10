@@ -15,7 +15,7 @@ export default function PostPage({ post }: { post: PostType }) {
 				<meta property="og:title" content={post.title} />
 				<meta property="og:image" content={logo} />
 				<meta property="revised" content={post.updated} />
-				<meta property="Classification" content={post.slug} />
+				<meta property="Classification" content={post.tags[0]} />
 			</Head>
 			<Post post={post} />
 		</>
