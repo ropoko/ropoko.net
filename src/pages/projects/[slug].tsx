@@ -1,13 +1,22 @@
 import hljs from 'highlight.js';
 import { marked } from 'marked';
+import Head from 'next/head';
 import React from 'react';
 import { Project } from '../../shared/types/project.type';
 import { Utils } from '../../shared/utils';
 import { ProjectStyle } from '../../styles/pages/project-style';
 
 const ProjectPage = ({ project }: { project: Project }) => {
+	const logo =
+		'https://avatars.githubusercontent.com/u/49417432?s=400&u=af9ff6eddae3945c6eb61b4ee4a8db97b426bf7a&v=4';
+
 	return (
 		<ProjectStyle>
+			<Head>
+				<meta property="og:title" content={project.name} />
+				<meta property="og:image" content={logo} />
+				<meta property="description" content={project.description} />
+			</Head>
 			<div
 				dangerouslySetInnerHTML={{
 					__html: marked(project.content, {

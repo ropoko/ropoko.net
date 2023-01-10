@@ -12,10 +12,10 @@ export default function PostPage({ post }: { post: PostType }) {
 		<>
 			<Head>
 				<title>Ropoko | {post.title}</title>
-				<meta name="og:title" content={post.title} />
-				<meta name="og:image" content={logo} />
-				<meta name="revised" content={post.updated} />
-				<meta name="Classification" content={post.slug} />
+				<meta property="og:title" content={post.title} />
+				<meta property="og:image" content={logo} />
+				<meta property="revised" content={post.updated} />
+				<meta property="Classification" content={post.slug} />
 			</Head>
 			<Post post={post} />
 		</>
