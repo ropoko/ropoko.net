@@ -16,9 +16,10 @@ export const BookmarkStyled = styled.div`
 	}
 
 	> img {
+		align-self: center;
 		width: 8rem;
 		padding-right: 0.8rem;
-		border-right: 1px solid ${(props) => props.theme.colors.tags.backgroundName};
+		border-right: 1px solid ${(props) => props.theme.colors.separator};
 	}
 
 	.text {
@@ -28,5 +29,11 @@ export const BookmarkStyled = styled.div`
 	}
 
 	@media (max-width: 580px) {
+		flex-direction: column;
+
+		> img {
+			align-self: center;
+			border: none;
+		}
 	}
 `;

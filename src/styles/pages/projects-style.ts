@@ -9,4 +9,8 @@ export const ProjectsStyle = styled.div`
 	grid-template-columns: 1fr;
 
 	padding: 2rem;
+
+	@media (max-width: 400px) {
+		width: 90%;
+	}
 `;
