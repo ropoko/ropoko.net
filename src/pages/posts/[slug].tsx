@@ -13,8 +13,10 @@ export default function PostPage({ post }: { post: PostType }) {
 			<Head>
 				<title>Ropoko | {post.title}</title>
 				<meta property="og:title" content={post.title} />
+				<meta property="twitter:title" content={post.title} />
 				<meta property="og:image" content={logo} />
-				<meta property="revised" content={post.updated} />
+				<meta property="twitter:image" content={logo} />
+				<meta property="revised" content={post.updated || 'not revised'} />
 				<meta property="Classification" content={post.tags[0]} />
 			</Head>
 			<Post post={post} />

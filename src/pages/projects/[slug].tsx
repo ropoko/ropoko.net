@@ -14,8 +14,11 @@ const ProjectPage = ({ project }: { project: Project }) => {
 		<ProjectStyle>
 			<Head>
 				<meta property="og:title" content={project.name} />
+				<meta property="twitter:title" content={project.name} />
 				<meta property="og:image" content={logo} />
-				<meta property="description" content={project.description} />
+				<meta property="twitter:image" content={logo} />
+				<meta property="og:description" content={project.description} />
+				<meta property="twitter:description" content={project.description} />
 			</Head>
 			<div
 				dangerouslySetInnerHTML={{

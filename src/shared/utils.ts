@@ -21,7 +21,7 @@ export class Utils {
 				title: data.title,
 				date: data.date,
 				tags: data.tags,
-				updated: data?.updated,
+				updated: data?.updated || '',
 				content,
 			};
 

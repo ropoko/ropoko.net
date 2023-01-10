@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PostStyle = styled.div`
 	width: 60%;
-	margin: 2.4rem 0 2.4rem 20rem;
+	margin: 2.4rem 0 2.4rem 23rem;
 
 	header {
 		display: flex;
@@ -52,6 +52,10 @@ export const PostStyle = styled.div`
 		margin: 1rem auto;
 	}
 
+	.updated {
+		display: block;
+	}
+
 	main pre {
 		width: 100%;
 		overflow-x: auto;
@@ -59,11 +63,8 @@ export const PostStyle = styled.div`
 		padding: 1rem 0;
 	}
 
-	@media (max-width: 780px) {
+	@media (max-width: 930px) {
 		margin: 2.4rem auto;
-	}
-
-	@media (max-width: 530px) {
 		width: 90%;
 	}
 `;

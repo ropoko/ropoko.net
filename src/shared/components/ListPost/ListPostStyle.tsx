@@ -25,17 +25,28 @@ export const ListPostStyle = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-	}
 
-	header section {
-		max-width: calc(100% - 10rem);
-	}
+		> section {
+			max-width: calc(100% - 10rem);
 
-	header section h1 {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		margin-right: 1rem;
+			h1 {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin-right: 1rem;
+			}
+		}
+
+		.dates {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: flex-start;
+
+			.updated {
+				display: block;
+				margin-bottom: 1rem;
+			}
+		}
 	}
 
 	footer {

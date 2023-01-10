@@ -21,9 +21,9 @@ const Post: React.FC<Props> = ({ post }: { post: PostType }) => {
 					<p>
 						Posted on <time>{post.date}</time>
 						{post.updated && (
-							<p>
-								| Updated <time>{post.updated}</time>
-							</p>
+							<span className="updated">
+								Updated <time>{post.updated}</time>
+							</span>
 						)}
 					</p>
 				</header>

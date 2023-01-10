@@ -29,7 +29,7 @@ export const NavHeadingStyle = styled.aside`
 		color: ${(props) => props.theme.colors.highlight};
 	}
 
-	@media (max-width: 780px) {
+	@media (max-width: 930px) {
 		display: none;
 	}
 `;

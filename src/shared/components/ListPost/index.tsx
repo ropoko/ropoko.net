@@ -14,7 +14,7 @@ const ListPost = ({ post }: { post: Post }) => {
 				</section>
 				<div className="dates">
 					<em>Posted on {post.date}</em>
-					{post.updated && <em>Updated {post.updated}</em>}
+					{post.updated && <em className="updated">Updated {post.updated}</em>}
 				</div>
 			</header>
 

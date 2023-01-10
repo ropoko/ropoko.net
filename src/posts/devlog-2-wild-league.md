@@ -1,7 +1,7 @@
 ---
 title: '# Devlog 2 - Wild League'
 date: '03/11/2022'
-tags: ['gamedev', 'wild-league', 'devlog']
+tags: ['wild-league', 'gamedev', 'devlog']
 ---
 
 Hey, welcome to the second devlog of this wild league series.
