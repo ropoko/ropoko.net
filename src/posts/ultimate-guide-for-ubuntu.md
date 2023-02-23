@@ -19,7 +19,12 @@ vscode - https://code.visualstudio.com/ download the deb file
 
 ## About Flatpak
 
-## Controlling versions
+## ASDF
+with [this tool](https://asdf-vm.com/) you can manage multiple versions of many different languages.
+
+### Install plugins
+
+### global x local
 
 # Gaming
 sudo apt install steam
