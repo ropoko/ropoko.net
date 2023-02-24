@@ -1,12 +1,9 @@
 ---
-title: 'Ultimate guide for Ubuntu'
+title: 'Guia introdutório para Linux'
 date: '17/01/2023'
+updated: '23/02/2023'
 tags: ['ubuntu', 'linux', 'programming']
 ---
-
-## this is just a draft
-
-for writing this post, I'm inspired by this [video](https://www.youtube.com/watch?v=epiyExCyb2s).
 
 # Dev
 sudo apt install git
