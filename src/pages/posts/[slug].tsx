@@ -12,10 +12,14 @@ export default function PostPage({ post }: { post: PostType }) {
 		<>
 			<Head>
 				<title>Ropoko | {post.title}</title>
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta key="twitter-site" name="twitter:site" content="@ropoko_" />
+				<meta name="twitter:image" content={logo} />
+				<meta name="twitter:title" content={post.title} />
+
 				<meta property="og:title" content={post.title} />
-				<meta property="twitter:title" content={post.title} />
 				<meta property="og:image" content={logo} />
-				<meta property="twitter:image" content={logo} />
 				<meta property="revised" content={post.updated || 'not revised'} />
 				<meta property="Classification" content={post.tags[0]} />
 			</Head>

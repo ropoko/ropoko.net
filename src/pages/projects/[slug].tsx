@@ -12,16 +12,24 @@ const ProjectPage = ({ project }: { project: Project }) => {
 
 	return (
 		<ProjectStyle>
-			<Head key={project.name}>
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@ropoko_" />
-				<meta name="twitter:title" content={project.name} />
-				<meta name="twitter:image" content={logo} />
-				<meta name="twitter:description" content={project.description} />
+			<Head>
+				<meta key="og-title" property="og:title" content={project.name} />
+				<meta key="og-image" property="og:image" content={logo} />
+				<meta
+					key="og-desc"
+					property="og:description"
+					content={project.description}
+				/>
 
-				<meta property="og:title" content={project.name} />
-				<meta property="og:image" content={logo} />
-				<meta property="og:description" content={project.description} />
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta key="twitter-site" name="twitter:site" content="@ropoko_" />
+				<meta key="twitter-title" name="twitter:title" content={project.name} />
+				<meta key="twitter-image" name="twitter:image" content={logo} />
+				<meta
+					key="twitter-desc"
+					name="twitter:description"
+					content={project.description}
+				/>
 			</Head>
 			<div
 				dangerouslySetInnerHTML={{
