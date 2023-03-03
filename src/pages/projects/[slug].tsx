@@ -12,7 +12,7 @@ const ProjectPage = ({ project }: { project: Project }) => {
 
 	return (
 		<ProjectStyle>
-			<Head>
+			<Head key={project.name}>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@ropoko_" />
 				<meta name="twitter:title" content={project.name} />
