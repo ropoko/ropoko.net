@@ -46,15 +46,15 @@ Vale dizer que por esse ser um gerenciador muito famoso presente em distros como
 
 Também, caso encontre algum programa que não esteja disponível via gerenciador de pacotes, como por exemplo o discord, perceba que ele está disponível no formato _**.deb**_, nesse caso, também conseguimos instalar esse pacote, pois o gerenciador é compatível com este formato, e dessa forma, cada gerenciador possui um formato de específico de pacote.
 
-<img src="/posts/discord-deb.png" width="800" height="400" />
+<img src="/posts/discord-deb.png" class="image" />
 
 e como exemplo de instalar um aquivo .deb no ubuntu:
 
-<img src="/posts/install-deb.png" width="600" height="300" />
+<img src="/posts/install-deb.png" class="image" />
 
 - basta clicar com o botão direito e abrir com outra aplicação, no caso, o software install.
 
-<img src="/posts/software-install.png" width="550" height="500" />
+<img src="/posts/software-install.png" class="image" />
 
 isso abrirá a central de softwares do Ubuntu, e então basta clicar em instalar.
 
