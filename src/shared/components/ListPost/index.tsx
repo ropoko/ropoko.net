@@ -13,8 +13,8 @@ const ListPost = ({ post }: { post: Post }) => {
 					</Link>
 				</section>
 				<div className="dates">
-					<em>Posted on {post.date}</em>
-					{post.updated && <em className="updated">Updated {post.updated}</em>}
+					<em>Posted: {post.date}</em>
+					{post.updated && <em className="updated">Updated: {post.updated}</em>}
 				</div>
 			</header>
 

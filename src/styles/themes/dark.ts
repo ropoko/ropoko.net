@@ -3,7 +3,7 @@ export default {
 	colors: {
 		header: '#292929',
 		background: '#111111',
-		text: '#F5F5F5',
+		text: '#D4D4D4',
 		highlight: '#D7E512',
 		highlightLink: '#E59512',
 		separator: '#F5F5F5',

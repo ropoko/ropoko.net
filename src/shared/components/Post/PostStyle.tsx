@@ -24,7 +24,19 @@ export const PostStyle = styled.div`
 		margin: 1.6rem 0;
 		font-size: 1.1em;
 		word-wrap: break-word;
-		font-weight: 500;
+		font: 16px Inter, sans-serif;
+		line-height: 1.5;
+		color: ${(props) => props.theme.colors.text};
+	}
+
+	main h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: ${(props) => props.theme.colors.separator};
+		margin-top: 1rem;
 	}
 
 	main a {

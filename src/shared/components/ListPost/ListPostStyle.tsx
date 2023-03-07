@@ -42,6 +42,8 @@ export const ListPostStyle = styled.div`
 			flex-direction: column-reverse;
 			align-items: flex-start;
 
+			font-weight: 500;
+
 			.updated {
 				display: block;
 				margin-bottom: 1rem;

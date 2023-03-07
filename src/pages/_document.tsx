@@ -52,9 +52,14 @@ export default class MyDocument extends Document {
 						content="Personal thoughts about tech and other stuff"
 					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
+					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link
 						// eslint-disable-next-line max-len
 						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@400;500;600&display=swap"
+						rel="stylesheet"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
 						rel="stylesheet"
 					/>
 				</Head>

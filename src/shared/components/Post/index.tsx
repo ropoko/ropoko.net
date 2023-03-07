@@ -19,10 +19,10 @@ const Post: React.FC<Props> = ({ post }: { post: PostType }) => {
 				<header>
 					<Link href="/">[ Go back ]</Link>
 					<p>
-						Posted on <time>{post.date}</time>
+						Posted: <time>{post.date}</time>
 						{post.updated && (
 							<span className="updated">
-								Updated <time>{post.updated}</time>
+								Updated: <time>{post.updated}</time>
 							</span>
 						)}
 					</p>
