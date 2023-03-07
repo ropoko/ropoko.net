@@ -64,6 +64,11 @@ export const PostStyle = styled.div`
 		margin: 1rem auto;
 	}
 
+	.image {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
 	.updated {
 		display: block;
 	}
