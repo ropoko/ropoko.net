@@ -16,7 +16,7 @@ Para podermos instalar o Linux no nosso computador, é necessário que haja uma 
 
 Como sistemas operacionais, podemos listar alguns: o próprio **Windows**, o caro **MacOS** e o mais famoso utilizando Linux, **Ubuntu**.
 
-Porém utilizando Linux, temos muitos outros: Ubuntu, Fedora, Mint, Arch, Suse ...
+Porém utilizando Linux, temos muitos outros: Ubuntu, Fedora, Mint, Arch, Suse ... E isso só é possível pois o Linux é um sistema open-source (código aberto), o que significa que todo o código para a construção desse sistema pode ser visto por qualquer pessoa, nesse caso, o código está disponibilizado [aqui](https://github.com/torvalds/linux), e por isso, utilizando essa base, muitos sistemas são criados.
 
 e ai entra a pergunta:
 
@@ -30,6 +30,37 @@ Um ponto importante também, é que no universo linux, os diferentes sistemas op
 - Existe diferença de um sistema operacional para outro?
 
 ## Diferenças sobre o lançamento de versões
+Existem dois tipos de lançamento de versões principais:
+
+### Versão Contínua (Rolling Realease)
+São os sistemas que não possuem grandes atualizações, por exemplo:
+
+- Windows necessita de uma grande atualização da versão 10 para 11, ocorrendo uma grande quantidade de alterações que impactam o funcionamento do sistema, dessa forma **NÃO** pode ser considerado uma versão contínua.
+
+Sistemas que possuem esse modelo de versão contínua, recebem mais atualizações que os modelos de versão padrão, pois embora há um maior número de atualizações, praticamente todos os dias, como é o caso do Arch Linux, por exemplo, o tamanho das atualizações são menores, mas caso você não atualize corriqueiramente, elas vão se acumular.
+
+**Vantagens:**
+- Sempre terá as versões mais atuais do sistema
+- Não precisa se preocupar com o lançamento de novas versões, visto que só há uma
+- Caso em uma atualização, receba algum pacote com bugs ou falhas, a correção pode vir mais rapidamente em outra atualização
+
+**Desvantagens:**
+- Por sempre estar na última versão, está mais suscetível a receber atualizações que venham com alguma falha ou bug, ou seja, não há estabilidade
+
+Algumas distros que seguem esse modelo: openSUSE Tumbleweed, Arch Linux, Manjaro, Solus
+
+### Versão Padrão (Standard Release)
+Basicamente sistemas que recebem grandes atualizações e possuem diferenças de versões, como por exemplo o Windows, que possui versões 7, 8, 10, 11.
+
+**Vantagens:**
+- São mais estáveis, pois geralmente, as atualizações que demoram mais a chegar, possuem mais tempo para correção de bugs
+- Há uma maior garantia de compatibilidade entre pacotes, e um menor número de bugs, pois não são atualizados tão frequentemente
+- Possuem versões LTS, que garantem suporte durante anos
+
+**Desvantagens:**
+- Para ter acesso a última versão de pacotes, terá que atualizar manualmente
+
+Algumas distros que seguem esse modelo: Ubuntu, Elementary, Debian
 
 ## Relacionado a pacotes
 De forma simplificada, entenda pacotes como "programas".
@@ -71,8 +102,30 @@ Já adiantando um outro ponto que será abordado ao longo deste texto, os sistem
 
 Por outro lado, temos por exemplo no Manjaro, similar ao que temos no Ubuntu, uma aplicação gráfica na qual podemos instalar e gerenciar aplicativos no geral.
 
-# Praticidade
+### Snap
+Snap é um software para você criar aplicações e publicar pacotes que podem ser usados em uma vasta quantidade de distribuições Linux, dessa maneira, de certa forma "inovou" na maneira que desenvolvedores criam/publicam softwares para sistemas linux, pois se antes precisavam criar pacotes para vários gerenciadores de pacotes, para então poder ter seu software funcionando em diferentes sistemas, agora precisam somente empacotar seu software como "snap" e ele já garante que vai funcionar corretamente na maioria dos sistemas.
 
+Por ser criado pela mesma empresa criadora do Ubuntu - [Canonical](https://canonical.com/), ao instalá-lo, você já possui automaticamente acesso aos pacotes snap, não precisando adicioná-los manualmente. No caso de ser um sistema no qual esses pacotes não venham por padrão, você pode seguir esse [passo a passo](https://snapcraft.io/docs/installing-snapd) - basta escolher qual o sistema que você está usando e aplicar os comandos no terminal.
+
+Você também pode ver quais softwares estão disponíveis através da loja [Snapcraft Store](https://snapcraft.io/store).
+
+### Flatpak
+Flatpak assim como os pacotes Snap permitem você usar os mesmos pacotes em diferentes sistemas.
+
+Você pode pesquisar os aplicativos [aqui](https://flathub.org/home).
+
+Vale dizer também que você pode utilizar Snaps e Flatpaks em um mesmo sistema, visto que são coisas diferentes.
+
+# Praticidade e dia a dia
+Quando estamos conhecendo sobre o mundo linux e open-source
+- navegar a internet
+- gerenciar aplicativos
+- ouvir música
+
+
+- internet
+- "pacote office"
+- musica
 
 # Esforço de migrar
 ## Já acostumado ao windows
@@ -104,3 +157,5 @@ https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions
 https://blog.packagecloud.io/5-best-linux-package-managers/
 
 https://www.linode.com/docs/guides/linux-package-management-overview/
+
+https://snapcraft.io/about

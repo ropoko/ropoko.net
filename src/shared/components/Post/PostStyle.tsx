@@ -24,7 +24,7 @@ export const PostStyle = styled.div`
 		margin: 1.6rem 0;
 		font-size: 1.1em;
 		word-wrap: break-word;
-		font: 16px Inter, sans-serif;
+		font: 18px Inter, sans-serif;
 		line-height: 1.5;
 		color: ${(props) => props.theme.colors.text};
 	}
