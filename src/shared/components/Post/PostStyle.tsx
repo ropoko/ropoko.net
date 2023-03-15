@@ -48,6 +48,12 @@ export const PostStyle = styled.div`
 		color: ${(props) => props.theme.colors.highlightLink};
 	}
 
+	main hr {
+		border: 1px solid ${(props) => props.theme.colors.separator};
+		opacity: 0.3;
+		margin: 1rem 0;
+	}
+
 	main h1 {
 		font-size: 3.2rem;
 		margin: 1rem 0;
