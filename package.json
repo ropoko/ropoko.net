@@ -6,10 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "debug": "NODE_OPTIONS='--inspect' next dev",
-    "vercel-build": "yarn workspace nextra run build && yarn workspace nextra-theme-docs run build && yarn build",
-    "clean": "rimraf .next .turbo"
+    "start": "next start"
   },
   "dependencies": {
     "next": ">=13",
