@@ -6,5 +6,5 @@ jobs:
   push-mirror:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Pushing mirror to github..."
-      - run: git push --mirror https://github.com/ropoko/ropoko.net.git
+      - name: Push Mirror
+        run: git push --mirror ${{ secrets.GITHUBREPO }}
