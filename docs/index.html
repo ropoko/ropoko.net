@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Blog</title>
+<style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 24px;
+}
+
+nav {
+  font-size: 14px;
+}
+
+nav a {
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.blog-post {
+  margin-bottom: 40px;
+}
+
+.blog-post a {
+	color: white;
+}
+
+.blog-post h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.blog-post time {
+  font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  nav a {
+    color: #ffffff;
+  }
+
+	.blog-post a {
+		color: white;
+	}
+
+  .blog-post time {
+    color: #8e8e8e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  nav a {
+    color: #000000;
+  }
+
+	.blog-post a {
+		color: black;
+	}
+
+  .blog-post time {
+    color: #666;
+  }
+}
+</style></head>
+
+<body>
+	<main class="container">
+		<header>
+			<h1>My Blog</h1>
+		</header>
+
+		
+			<div class="blog-post">
+				<a href="guia-introdutório-para-linux.html">
+					<h1> Guia introdutório para Linux </h1>
+				</a>
+
+				<time> 2023/01/17 </time>
+				<p> wip </p>
+			</div>
+		
+			<div class="blog-post">
+				<a href="setting-up-plex-media-server-linux.html">
+					<h1> Setting up Plex Media Server Linux </h1>
+				</a>
+
+				<time> 2022/12/21 </time>
+				<p> I&#039;ll show how to create a plex server on different linux distributions (my main ones) and add IPTV plugin </p>
+			</div>
+		
+			<div class="blog-post">
+				<a href="starting-with-powershell.html">
+					<h1> Starting with powershell </h1>
+				</a>
+
+				<time> 2022/09/23 </time>
+				<p> This will be kinda mini-course for people who want to get an overview of powershell. </p>
+			</div>
+		
+			<div class="blog-post">
+				<a href="some-things-about-hikvision-anpr-module.html">
+					<h1> Some things about Hikvision ANPR module </h1>
+				</a>
+
+				<time> 2024/08/03 </time>
+				<p> This will be a quick post about some tricky things that I found while working with Hikvision ANPR module. </p>
+			</div>
+		
+			<div class="blog-post">
+				<a href="movendo-objetos-com-love2d.html">
+					<h1> Movendo objetos com Love2D </h1>
+				</a>
+
+				<time> 2022/08/22 </time>
+				<p> Nesse post vou mostrar como podemos movimentar objetos com a game engine Love2D. </p>
+			</div>
+		
+			<div class="blog-post">
+				<a href="setting-up-jellyfin-on-raspberry-pi.html">
+					<h1> Setting up Jellyfin on Raspberry Pi </h1>
+				</a>
+
+				<time> 2022/12/30 </time>
+				<p> In this post I&#039;ll install jellyfin on a raspberry using docker. </p>
+			</div>
+		
+	</main>
+</body>
+</html>

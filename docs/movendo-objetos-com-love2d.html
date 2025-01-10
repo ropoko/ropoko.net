@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movendo objetos com Love2D</title>
+<style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 24px;
+}
+
+h2 {
+  color: #ffd700;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.metadata {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.code-block {
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.back {
+	display: block;
+	margin-bottom: 1rem;
+	color: #4a90e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  nav a {
+    color: #ffffff;
+  }
+
+	a {
+		color: white;
+	}
+
+  time {
+    color: #8e8e8e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  nav a {
+    color: #000000;
+  }
+
+	a {
+		color: black;
+	}
+
+  time {
+    color: #666;
+  }
+}
+</style></head>
+
+<body>
+	<main class="container">
+		<header>
+			<a class="back" href="./index.html">Back</a>
+
+			<h1> Movendo objetos com Love2D </h1>
+			<time> posted on 2022/08/22 </time>
+			<p> Nesse post vou mostrar como podemos movimentar objetos com a game engine Love2D. </p>
+		</header>
+
+		<p>Os conceitos desse post são de nivel iniciante e representam algumas das dificuldades que passei enquanto estava estudando.</p>
+<h1>Utilizando o Mouse</h1>
+<p>Caso quisermos ter um objeto seguindo o ponteiro do mouse, como é o caso do jogo <a href="https://agar.io">agar.io</a>, por exemplo.</p>
+<h2>Encontrando coordenadas do mouse</h2>
+<p>Primeiro, precisamos ter controle sobre as coordenadas do mouse (x,y):</p>
+<p>```lua</p>
+<p>function love.update(dt)</p>
+<p>	local x,y = love.mouse.getPosition()</p>
+<p>end</p>
+<p>```</p>
+<p>Pronto, com essa linha, já temos controle sobre onde o nosso mouse está.</p>
+<h2>Desenhando o objeto</h2>
+<p>Agora vamos desenhar o círculo que irá seguir o mouse:</p>
+<p>```lua</p>
+<p>function love.draw()</p>
+<p>	-- argumentos da funcao modo (que será desenhado), x, y, width, height</p>
+<p>	love.graphics.ellipse("fill", 50, 50, 50, 50)</p>
+<p>end</p>
+<p>```</p>
+<p>Com isso já temos o nosso objeto em tela, por enquanto estático.</p>
+<h2>Dando vida ao objeto</h2>
+<p>Para fazer com que o objeto se movimente, vamos passar as coordenadas que obtemos do mouse e passar para a função draw() que é responsável por desenhar o nosso objeto na tela.</p>
+<p>```lua</p>
+<p>function love.update(dt)</p>
+<p>	local x,y = love.mouse.getPosition()</p>
+<p>	-- variavel global para poder passar as coords. entre funções</p>
+<p>	PLAYER = {</p>
+<p>		x = 0,</p>
+<p>		y = 0</p>
+<p>	}</p>
+<p>end</p>
+<p>function love.draw()</p>
+<p>	-- argumentos da funcao modo, x, y, width, height</p>
+<p>	love.graphics.ellipse("fill", PLAYER.x, PLAYER.y, 50, 50)</p>
+<p>end</p>
+<p>```</p>
+<p>Agora nosso objeto está se movimentando, porém ele esta junto ao mouse e esse não é exatamente o comportamento que queremos, por isso vamos adicionar alguns elementos a nossa função.</p>
+<h2>Adicionando propriedades de velocidade e distância</h2>
+<p>Para que exista uma diferença entre a posição do objeto e do mouse, para causar a impressão de que o objeto está "seguindo o mouse", precisamos realizar um pequeno calculo:</p>
+<p>```lua</p>
+<p>-- variavel global para poder passar as coords. entre funcoes</p>
+<p>-- agora movida para fora da funcao para que seja carregada somente uma vez</p>
+<p>PLAYER = {</p>
+<p>	x = 0,</p>
+<p>	y = 0</p>
+<p>}</p>
+<p>function love.update()</p>
+<p>	local x, y = love.mouse.getPosition()</p>
+<p>	-- primeiro calculamos a diferença entre a posição</p>
+<p>	-- do nosso objeto e do mouse em x,y</p>
+<p>	local x_distance = mousex - PLAYER.x</p>
+<p>	local y_distance = mousey - PLAYER.y</p>
+<p>	-- definimos uma velocidade padrao</p>
+<p>	local speed = 0.05</p>
+<p>	-- atribuímos ao jogador a sua própria posição</p>
+<p>	-- somando o produto da sua distância com o mouse</p>
+<p>	-- com a velocidade padrão</p>
+<p>	PLAYER.x = PLAYER.x + (x_distance * speed)</p>
+<p>	PLAYER.y = PLAYER.y + (y_distance * speed)</p>
+<p>end</p>
+<p>```</p>
+<p>> Note que nao alteramos a função love.draw()</p>
+<h2>Resultado</h2>
+<p>!<a href="/posts/movement-love2d.gif"></a></p>
+
+	</div>
+</body>
+</html>

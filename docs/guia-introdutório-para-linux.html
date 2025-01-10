@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Guia introdutório para Linux</title>
+<style>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  font-size: 24px;
+}
+
+h2 {
+  color: #ffd700;
+  font-size: 28px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.metadata {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.code-block {
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+.back {
+	display: block;
+	margin-bottom: 1rem;
+	color: #4a90e2;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  nav a {
+    color: #ffffff;
+  }
+
+	a {
+		color: white;
+	}
+
+  time {
+    color: #8e8e8e;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  nav a {
+    color: #000000;
+  }
+
+	a {
+		color: black;
+	}
+
+  time {
+    color: #666;
+  }
+}
+</style></head>
+
+<body>
+	<main class="container">
+		<header>
+			<a class="back" href="./index.html">Back</a>
+
+			<h1> Guia introdutório para Linux </h1>
+			<time> posted on 2023/01/17 </time>
+			<p> wip </p>
+		</header>
+
+		<p>Oi, nesse post quero divagar um pouco sobre Linux, e quebrar alguns preconceitos que podem ter surgido ao longo do caminho.</p>
+<p>Se você pesquisou por esse tema, vou entender que já possui certo conhecimento em informática no geral e que está cogitando em mudar seu sistema operacional ou então já o utiliza.</p>
+<p>Caso você esteja curioso, porém não participa da área técnica, aqui vai uma breve introdução:</p>
+<p>De maneira simplista, dizemos que Linux, trata-se de uma parte de software chamada _<strong>Kernel</strong>_, esse software é responsável por conectar hardware (físico) e software (lógico) - dessa maneira, quando você conecta o mouse ou algum dispositivo usb no seu computador, ele é o responsável por capturar essa informação.</p>
+<p>Para podermos instalar o Linux no nosso computador, é necessário que haja uma outra camada de software "por cima", chamada _<strong>sistema operacional</strong>_, que além de disponibilizar uma variedade de ferramentas úteis também vai permitir que possamos utilizar outros programas, que consequentemente vão depender do gerenciamento do disco, RAM, etc. realizado pelo kernel.</p>
+<p>Como sistemas operacionais, podemos listar alguns: o próprio <strong>Windows</strong>, o caro <strong>MacOS</strong> e o mais famoso utilizando Linux, <strong>Ubuntu</strong>.</p>
+<p>Porém utilizando Linux, temos muitos outros: Ubuntu, Fedora, Mint, Arch, Suse ... E isso só é possível pois o Linux é um sistema open-source (código aberto), o que significa que todo o código para a construção desse sistema pode ser visto por qualquer pessoa, nesse caso, o código está disponibilizado <a href="https://github.com/torvalds/linux">aqui</a>, e por isso, utilizando essa base, muitos sistemas são criados.</p>
+<p>e ai entra a pergunta:</p>
+<h1>Como escolher o sistema operacional?</h1>
+<p>Com isso surgem outras perguntas que devem ser respondidas antes:</p>
+<p>*Nota: De agora em diante será considerado apenas sistemas operacionais utilizando Linux.</p>
+<p>Um ponto importante também, é que no universo linux, os diferentes sistemas operacionais que utilizam linux, são chamados de _<strong>distribuições</strong>_ ou só _<strong>distros</strong>_.</p>
+<li>Existe diferença de um sistema operacional para outro?</li>
+<h2>Diferenças sobre o lançamento de versões</h2>
+<p>Existem dois tipos de lançamento de versões principais:</p>
+<h3>Versão Contínua (Rolling Realease)</h3>
+<p>São os sistemas que não possuem grandes atualizações, por exemplo:</p>
+<li>Windows necessita de uma grande atualização da versão 10 para 11, ocorrendo uma grande quantidade de alterações que impactam o funcionamento do sistema, dessa forma **NÃO** pode ser considerado uma versão contínua.</li>
+<p>Sistemas que possuem esse modelo de versão contínua, recebem mais atualizações que os modelos de versão padrão, pois embora há um maior número de atualizações, praticamente todos os dias, como é o caso do Arch Linux, por exemplo, o tamanho das atualizações são menores, mas caso você não atualize constantemente, elas vão se acumular.</p>
+<p><strong>Vantagens:</strong></p>
+<li>Sempre terá as versões mais atuais do sistema</li>
+<li>Não precisa se preocupar com o lançamento de novas versões, visto que só há uma</li>
+<li>Caso em uma atualização, receba algum pacote com bugs ou falhas, a correção pode vir mais rapidamente em outra atualização</li>
+<p><strong>Desvantagens:</strong></p>
+<li>Por sempre estar na última versão, está mais suscetível a receber atualizações que venham com alguma falha ou bug, ou seja, não há estabilidade</li>
+<li>Mais propício a ter erros de incompatibilidade de pacotes</li>
+<p>Algumas distros que seguem esse modelo: openSUSE Tumbleweed, Arch Linux, Manjaro, Solus</p>
+<h3>Versão Padrão (Standard Release)</h3>
+<p>Basicamente sistemas que recebem grandes atualizações e possuem diferenças de versões, como por exemplo o Windows, que possui versões 7, 8, 10, 11.</p>
+<p><strong>Vantagens:</strong></p>
+<li>São mais estáveis, pois geralmente, as atualizações que demoram mais a chegar, possuem mais tempo para correção de bugs</li>
+<li>Há uma maior garantia de compatibilidade entre pacotes, e um menor número de bugs, pois não são atualizados tão frequentemente</li>
+<li>Possuem versões LTS, que garantem suporte durante anos</li>
+<p><strong>Desvantagens:</strong></p>
+<li>Para ter acesso a última versão de pacotes, terá que atualizar manualmente</li>
+<p>Algumas distros que seguem esse modelo: Ubuntu, Elementary, Debian</p>
+<h2>Relacionado a pacotes</h2>
+<p>De forma simplificada, entenda pacotes como "programas".</p>
+<p>Dessa forma, cada distro possui um gerenciador próprio para gerenciar seus programas e cada um vai possuir suas especificidades.</p>
+<p>> As informações sobre quantidade de pacotes foram retiradas <a href="https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions#Package_management_and_installation">daqui</a>.</p>
+<h3>APT</h3>
+<p>A começar por um dos mais famosos (também por ser utilizado no Ubuntu - distro mais famosa), possui comandos muito fáceis de serem utilizados no terminal</p>
+<p>e possui uma quantidade de pacotes disponíveis muito vasta, em torno de 100mil.</p>
+<p>Vale dizer que por esse ser um gerenciador muito famoso presente em distros como: Ubuntu, Debian, ElementaryOs, Mint, a maioria delas possui um programa próprio para instalação gráfica, ou seja, <strong>não precisando ser necessário conhecer sobre comandos no terminal</strong>.</p>
+<p>Também, caso encontre algum programa que não esteja disponível via gerenciador de pacotes, como por exemplo o discord, perceba que ele está disponível no formato _<strong>.deb</strong>_, nesse caso, também conseguimos instalar esse pacote, pois o gerenciador é compatível com este formato, e dessa forma, cada gerenciador possui um formato de específico de pacote.</p>
+<p><img src="/posts/discord-deb.png" class="image" alt="Selecionado a opção de arquivo .deb para baixar o discord" /></p>
+<p>e como exemplo de instalar um aquivo .deb no ubuntu:</p>
+<p><img src="/posts/install-deb.png" class="image" alt="escolhendo a opção de abrir com outras aplicações" /></p>
+<li>basta clicar com o botão direito e abrir com outra aplicação, no caso, o software install.</li>
+<p><img src="/posts/software-install.png" class="image" alt="Selecionado a loja de software do ubuntu" /></p>
+<p>isso abrirá a central de softwares do Ubuntu, e então basta clicar em instalar.</p>
+<h3>Pacman</h3>
+<p>Um gerenciador também muito conhecido, o pacman, é utilizado em distros como Arch Linux, Manjaro, etc.</p>
+<p>Nesse caso, temos por exemplo o <a href="https://aur.archlinux.org/">AUR</a> - Repositório de pacotes gerenciado e alimentado pela comunidade que pode receber atualizações e novos pacotes de qualquer usuário, o que traz consigo uma grande quantidade de pacotes, o que é positivo, mas por outro lado, traz também possibilidades do pacote possuir conteúdo malicioso.</p>
+<p>Caso você vá pesquisar sobre o Arch Linux, vai ver em vários lugares que trata-se de um sistema pouco amigável a novos usuários e difícil de fazer as coisas funcionarem, nesse caso, o sistema por si só é pensado para usuários mais avançados que já possuem certo conhecimento, então a instalação de pacotes basicamente se restringe ao uso do terminal.</p>
+<p>Por outro lado, temos no Manjaro, que também utiliza o gerenciador Pacman, similar ao que temos no Ubuntu, uma aplicação gráfica na qual podemos instalar e gerenciar aplicativos no geral. E quando digo que "temos uma aplicação X", quero dizer que ela já vem instalada por padrão, mas sempre existe a possibilidade de instalar um programa de terceiros que cumpre essa função, até mesmo caso você queira substituir o que já veio pré-instalado.</p>
+<p>Apenas para esclarecer, os pacotes que vem do <strong>AUR</strong> são mantidos pela comunidade, mas também existe a possibilidade de usar apenas os <a href="https://archlinux.org/packages/">pacotes oficiais</a> caso você prefira.</p>
+<h3>Snap</h3>
+<p>Snap é um software para você criar aplicações e publicar pacotes que podem ser usados em uma vasta quantidade de distribuições Linux, dessa maneira, de certa forma "inovou" na maneira que desenvolvedores criam/publicam softwares para sistemas linux, pois se antes precisavam criar pacotes para vários gerenciadores de pacotes, para então poder ter seu software funcionando em diferentes sistemas, agora precisam somente empacotar seu software como "snap" e ele já garante que vai funcionar corretamente na maioria dos sistemas.</p>
+<p>Por ser criado pela mesma empresa criadora do Ubuntu - <a href="https://canonical.com/">Canonical</a>, ao instalá-lo, você já possui automaticamente acesso aos pacotes snap, não precisando adicioná-los manualmente. No caso de ser um sistema no qual esses pacotes não venham por padrão, você pode seguir esse <a href="https://snapcraft.io/docs/installing-snapd">passo a passo</a> - basta escolher qual o sistema que você está usando e aplicar os comandos no terminal.</p>
+<p>Você também pode ver quais softwares estão disponíveis através da loja <a href="https://snapcraft.io/store">Snapcraft Store</a>.</p>
+<h3>Flatpak</h3>
+<p>Flatpak assim como os pacotes Snap permitem você usar os mesmos pacotes em diferentes sistemas.</p>
+<p>Você pode pesquisar os aplicativos <a href="https://flathub.org/home">aqui</a>.</p>
+<p>Vale dizer também que você pode utilizar Snaps e Flatpaks em um mesmo sistema, visto que são coisas diferentes.</p>
+<p>---</p>
+<p>Por fim, não temos como dizer que um sistema é melhor que outro, cada um servirá como ferramenta para você realizar as tarefas que precisa realizar, vai de você entender qual oferece os recursos que melhor atenda suas necessidades.</p>
+<p>Também é importante destacar, que para usuários avançados e com conhecimento técnico, qualquer sistema vai servir, já que pode ser customizado da maneira que bem entender, mas trazendo aqui para usuários iniciantes, a escolha de um sistema deve ser vista como aquele que já vem com as ferramentas que você vai precisar, sem precisar de muitos "passo a passo" e tutoriais para começar a usar.</p>
+<h1>Praticidade e dia a dia</h1>
+<p>Uma vez escolhido o sistema operacional, vamos agora passar por tarefas comuns do dia a dia e entender como funciona o processo.</p>
+<p>Continuando, para este tópico vou considerar o sistema Ubuntu, por ser o que mais utilizado e consequentemente o que mais possui materiais de estudo e tutoriais por aí.</p>
+<p><strong>Nota:</strong> Não vou passar pelo processo de instalação, uma vez que existem diversos tutoriais por ai que explicariam melhor que eu jamais conseguiria. Como indicação, sugiro <a href="https://www.youtube.com/watch?v=6GIAtOlXLQU">esse do Diolinux</a> - embora seja antigo, o passo a passo ainda é o mesmo, e eventualmente qualquer passo que não esteja no vídeo, vale uma pesquisa a parte.</p>
+<p><img src="/posts/ubuntu.png" class="image" alt="interface inicial pós-instalação do ubuntu" /></p>
+<p>Ao entrar a primeira vez no sistema, podemos ver que alguns aplicativos já vem instalados, como:</p>
+<li>firefox</li>
+<li>thunderbird (gerenciador de e-mail)</li>
+<li>rhythmbox (gerenciador de músicas e rádio)</li>
+<li>LibreOffice (para trabalhar com documentos - similar ao pacote office)</li>
+<li>Loja de software</li>
+<p>Alguns utilitários como:</p>
+<li>Calculadora</li>
+<li>Gerenciador de senhas</li>
+<li>Gerenciador de discos</li>
+<li>Aplicativos de Backup</li>
+<p>Por fim, mas não menos importante, alguns jogos como paciência e campo minado.</p>
+<h2>Navegar na internet</h2>
+<p>Para navegar na internet, podemos utilizar o firefox que já vem pré-instalado, mas caso esse não seja o seu navegador preferido, basta instalar o desejado.</p>
+<p>Ao pesquisar por exemplo "Chrome" na loja de softwares, vai perceber que o "Google Chrome" não irá aparecer e pode aparecer somente uma outra versão "Chromium", que se trata da versão de código aberto do navegador chrome, e que na prática não possui nenhuma diferença da versão que você deve estar acostumado.</p>
+<p>Para baixar o <strong>_"verdadeiro"_</strong> Chrome, basta ir no site e escolher a versão <strong>.deb</strong>.</p>
+<p><img src="/posts/chrome-linux.png" class="image" alt="Instalado google chrome no ubuntu a partir do arquivo .deb" /></p>
+<p><br /></p>
+<p><br /></p>
+<p>Uma vez baixado, para instalar basta seguir <a href="#apt">os mesmos passos mostrados antes</a>.</p>
+<p>O mesmo segue para qualquer outra aplicação que você precisar instalar através do arquivo <strong>.deb</strong>.</p>
+<h2>Baixar/Excluir programas</h2>
+<h2>Aplicativo de Música</h2>
+<h2>Manipular documentos</h2>
+<h1>Esforço de migrar</h1>
+<h2>Já acostumado ao windows</h2>
+<h1>Programas indisponíveis</h1>
+<h1>Games</h1>
+<h1>Referências</h1>
+<h2>Porquê usar Linux?</h2>
+<p>https://pt.tipsandtrics.com/which-linux-package-manager-763427</p>
+<p>https://diolinux.com.br/editorial/o-que-leva-um-novo-usuario-desistir-do-linux.html</p>
+<p>https://diolinux.com.br/sistemas-operacionais/5-coisas-que-fazem-v0oce-desistir-do-linux.html</p>
+<p>https://blog.4linux.com.br/por-que-usar-sistemas-operacionais-linux/</p>
+<h2>Relacionado ao diferente tipo de lançamento de versões</h2>
+<p>https://pt.begin-it.com/6098-linux-distribution-basics-rolling-releases-vs.-standard-releases</p>
+<h2>Relacionado a pacotes</h2>
+<p>https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions</p>
+<p>https://blog.packagecloud.io/5-best-linux-package-managers/</p>
+<p>https://www.linode.com/docs/guides/linux-package-management-overview/</p>
+<p>https://snapcraft.io/about</p>
+
+	</div>
+</body>
+</html>
