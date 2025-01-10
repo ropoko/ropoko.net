@@ -3,11 +3,11 @@ run-name: ${{ gitea.actor }} is pushing mirror to github
 on: [push]
 
 jobs:
-	push-mirror:
-		runs-on: ubuntu-latest
-		steps:
-			- name: Checkout code
-			- run: git clone ${{ secrets.GITEAREPO }} .
+  push-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        run: git clone ${{ secrets.GITEAREPO }} .
 
-			- name: Push Mirror
-			- run: git push --mirror ${{ secrets.GITHUBREPO }}
+      - name: Push Mirror
+        run: git push --mirror ${{ secrets.GITHUBREPO }}
