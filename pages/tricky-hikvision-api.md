@@ -3,7 +3,6 @@ title: Some things about Hikvision ANPR module
 description: This will be a quick post about some tricky things that I found while working with Hikvision ANPR module.
 date: 2024/08/03
 tag: hikvision,camera,ISAPI,ANPR
-author: Ropoko
 ---
 
 # About the camera

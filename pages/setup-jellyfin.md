@@ -3,7 +3,6 @@ title: Setting up Jellyfin on Raspberry Pi
 description: In this post I'll install jellyfin on a raspberry using docker.
 date: 2022/12/30
 tag: jellyfin,media server,linux,raspberry
-author: Ropoko
 ---
 
 # Install Docker

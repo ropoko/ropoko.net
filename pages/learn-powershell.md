@@ -3,7 +3,6 @@ title: Starting with powershell
 description: This will be kinda mini-course for people who want to get an overview of powershell.
 date: 2022/09/23
 tag: powershell,shell,terminal
-author: Ropoko
 ---
 
 # What's Powershell?

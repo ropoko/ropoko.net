@@ -3,8 +3,6 @@ title: Guia introdutório para Linux
 description: wip
 date: 2023/01/17
 tag: ubuntu, linux, programming
-author: Ropoko
-type: post
 ---
 
 Oi, nesse post quero divagar um pouco sobre Linux, e quebrar alguns preconceitos que podem ter surgido ao longo do caminho.

@@ -3,7 +3,6 @@ title: Setting up Plex Media Server Linux
 description: I'll show how to create a plex server on different linux distributions (my main ones) and add IPTV plugin
 date: 2022/12/21
 tag: plex,media server,linux,raspberry
-author: Ropoko
 ---
 
 ***Note:*** The IPTV plugin does not work anymore, you can see more about in the [section](#installing-iptv-plugin).
