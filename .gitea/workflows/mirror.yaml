@@ -1,4 +1,4 @@
-name: [Github] Push Mirror
+name: Github Push Mirror
 run-name: ${{ gitea.actor }} is pushing mirror to github
 on: [push]
 
@@ -6,4 +6,5 @@ jobs:
   push-mirror:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Pushing mirror to github..."
       - run: git push --mirror https://github.com/ropoko/ropoko.net.git
