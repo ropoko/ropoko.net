@@ -7,7 +7,7 @@ jobs:
 		runs-on: ubuntu-latest
 		steps:
 			- name: Checkout code
-				run: git clone ${{ secrets.GITEAREPO }} .
+			- run: git clone ${{ secrets.GITEAREPO }} .
 
 			- name: Push Mirror
-				run: git push --mirror ${{ secrets.GITHUBREPO }}
+			- run: git push --mirror ${{ secrets.GITHUBREPO }}
