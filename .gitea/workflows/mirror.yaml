@@ -11,3 +11,5 @@ jobs:
 
       - name: Push Mirror
         run: git push --mirror ${{ secrets.GITHUBREPO }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITEATOKEN }}
