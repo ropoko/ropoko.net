@@ -1,8 +1,6 @@
 name: Github Push Mirror
-on:
-	push:
-		branches:
-			- '*'
+run-name: ${{ gitea.actor }} is pushing mirror to github
+on: [push]
 
 jobs:
 	push-mirror:
