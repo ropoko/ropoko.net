@@ -9,7 +9,11 @@ jobs:
       - name: Checkout code
         run: git clone ${{ secrets.GITEAREPO }} .
 
+      - name: Go to repo
+        run: cd ropoko.net/
+
       - name: Push Mirror
-        run: git push --mirror ${{ secrets.GITHUBREPO }}
+        run: git push --verbose --mirror ${{ secrets.GITHUBREPO }}
         env:
+          USERNAME: ropoko
           GITHUB_TOKEN: ${{ secrets.GITEATOKEN }}
