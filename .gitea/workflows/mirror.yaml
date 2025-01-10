@@ -9,8 +9,9 @@ jobs:
       - name: Checkout code
         run: git clone ${{ secrets.GITEAREPO }} .
 
+      - name: Add remote
+        run: git remote add mirror https://ropoko:${{ secrets.GITEATOKEN }}@github.com/ropoko/ropoko.net.git
+
       - name: Push Mirror
-        run: git push --verbose --mirror ${{ secrets.GITHUBREPO }}
-        env:
-          USERNAME: ropoko
-          GITHUB_TOKEN: ${{ secrets.GITEATOKEN }}
+        run: git push --verbose --mirror mirror
+
