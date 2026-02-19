@@ -78,15 +78,15 @@ Vale dizer que por esse ser um gerenciador muito famoso presente em distros como
 
 Também, caso encontre algum programa que não esteja disponível via gerenciador de pacotes, como por exemplo o discord, perceba que ele está disponível no formato _**.deb**_, nesse caso, também conseguimos instalar esse pacote, pois o gerenciador é compatível com este formato, e dessa forma, cada gerenciador possui um formato de específico de pacote.
 
-<img src="/posts/discord-deb.png" class="image" alt="Selecionado a opção de arquivo .deb para baixar o discord" />
+<img src="/public/discord-deb.png" class="image" alt="Selecionado a opção de arquivo .deb para baixar o discord" />
 
 e como exemplo de instalar um aquivo .deb no ubuntu:
 
-<img src="/posts/install-deb.png" class="image" alt="escolhendo a opção de abrir com outras aplicações" />
+<img src="/public/install-deb.png" class="image" alt="escolhendo a opção de abrir com outras aplicações" />
 
 - basta clicar com o botão direito e abrir com outra aplicação, no caso, o software install.
 
-<img src="/posts/software-install.png" class="image" alt="Selecionado a loja de software do ubuntu" />
+<img src="/public/software-install.png" class="image" alt="Selecionado a loja de software do ubuntu" />
 
 isso abrirá a central de softwares do Ubuntu, e então basta clicar em instalar.
 
@@ -128,7 +128,7 @@ Continuando, para este tópico vou considerar o sistema Ubuntu, por ser o que ma
 
 **Nota:** Não vou passar pelo processo de instalação, uma vez que existem diversos tutoriais por ai que explicariam melhor que eu jamais conseguiria. Como indicação, sugiro [esse do Diolinux](https://www.youtube.com/watch?v=6GIAtOlXLQU) - embora seja antigo, o passo a passo ainda é o mesmo, e eventualmente qualquer passo que não esteja no vídeo, vale uma pesquisa a parte.
 
-<img src="/posts/ubuntu.png" class="image" alt="interface inicial pós-instalação do ubuntu" />
+<img src="/public/ubuntu.png" class="image" alt="interface inicial pós-instalação do ubuntu" />
 
 Ao entrar a primeira vez no sistema, podemos ver que alguns aplicativos já vem instalados, como:
 
@@ -154,7 +154,7 @@ Ao pesquisar por exemplo "Chrome" na loja de softwares, vai perceber que o "Goog
 
 Para baixar o **_"verdadeiro"_** Chrome, basta ir no site e escolher a versão **.deb**.
 
-<img src="/posts/chrome-linux.png" class="image" alt="Instalado google chrome no ubuntu a partir do arquivo .deb" />
+<img src="/public/chrome-linux.png" class="image" alt="Instalado google chrome no ubuntu a partir do arquivo .deb" />
 
 <br />
 <br />

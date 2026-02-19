@@ -5,49 +5,49 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Setting up Plex Media Server Linux</title>
 <style>body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 header {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 h1 {
-  margin: 0 0 1rem 0;
-  font-size: 24px;
+	margin: 0 0 1rem 0;
+	font-size: 24px;
 }
 
 h2 {
-  color: #ffd700;
-  font-size: 28px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+	color: #ffd700;
+	font-size: 28px;
+	margin-top: 30px;
+	margin-bottom: 15px;
 }
 
 p {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 
 .metadata {
-  color: #a0a0a0;
-  font-size: 14px;
-  margin-bottom: 20px;
+	color: #a0a0a0;
+	font-size: 14px;
+	margin-bottom: 20px;
 }
 
 .code-block {
-  background-color: #2a2a2a;
-  border-radius: 5px;
-  padding: 15px;
-  margin-bottom: 20px;
-  font-family: monospace;
-  white-space: pre-wrap;
+	background-color: #2a2a2a;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 20px;
+	font-family: monospace;
+	white-space: pre-wrap;
 }
 
 .back {
@@ -56,44 +56,52 @@ p {
 	color: #4a90e2;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-  }
+img {
+	width: 100%;
+	height: 100%;
+}
 
-  nav a {
-    color: #ffffff;
-  }
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #1a1a1a;
+		color: #ffffff;
+	}
+
+	nav a {
+		color: #ffffff;
+	}
 
 	a {
 		color: white;
 	}
 
-  time {
-    color: #8e8e8e;
-  }
+	time {
+		color: #8e8e8e;
+	}
 }
 
 @media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffffff;
-    color: #000000;
-  }
+	body {
+		background-color: #ffffff;
+		color: #000000;
+	}
 
-  nav a {
-    color: #000000;
-  }
+	nav a {
+		color: #000000;
+	}
 
 	a {
 		color: black;
 	}
 
-  time {
-    color: #666;
-  }
+	time {
+		color: #666;
+	}
 }
-</style></head>
+</style>	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark-dimmed.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+</head>
 
 <body>
 	<main class="container">
@@ -110,9 +118,8 @@ p {
 <p>I will follow this tutorial from <a href="https://wiki.archlinux.org/title/plex">arch wiki</a></p>
 <h2>Install from AUR</h2>
 <p>using yay - https://aur.archlinux.org/packages/plex-media-server</p>
-<p>```bash</p>
-<p>$ yay -Sy plex-media-server</p>
-<p>```</p>
+<pre><code class="language-bash">$ yay -Sy plex-media-server
+</code></pre>
 <h1>Raspberry Pi OS</h1>
 <h2>Download the .deb package</h2>
 <p>get the file here https://www.plex.tv/media-server-downloads/#plex-media-server, copy the link of the version you want and then change the url below by the copied link</p>
@@ -122,18 +129,15 @@ p {
 <h1>Start service</h1>
 <p>This step works for any of the above distributions.</p>
 <li>start it</li>
-<p>```bash</p>
-<p>$ sudo systemctl start plexmediaserver</p>
-<p>```</p>
+<pre><code class="language-bash">$ sudo systemctl start plexmediaserver
+</code></pre>
 <li>then enable it</li>
-<p>```bash</p>
-<p>$ sudo systemctl enable plexmediaserver</p>
-<p>```</p>
+<pre><code class="language-bash">$ sudo systemctl enable plexmediaserver
+</code></pre>
 <h2>Check if it works</h2>
 <p>The default URL will be</p>
-<p>```text</p>
-<p>http://localhost:32400/web</p>
-<p>```</p>
+<pre><code class="language-text">http://localhost:32400/web
+</code></pre>
 <h2>Installing IPTV plugin</h2>
 <p>This plugin does not work anymore, <a href="https://www.plex.tv/blog/subtitles-and-sunsets-big-improvements-little-housekeeping/">because plex decided to not accept video plugins anymore</a>, so in the next days, I'll be doing another post testing <a href="https://jellyfin.org/">Jellyfin</a>, since IPTV is essential for me at this time.</p>
 <p>But, as mentioned in this <a href="https://github.com/Cigaras/IPTV.bundle/issues/231">issue on github</a> video plugins still work if you downgrade to Version 1.16.0.1226</p>

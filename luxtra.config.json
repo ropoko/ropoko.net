@@ -1,4 +1,9 @@
 {
   "title": "Ropoko | Blog",
-  "theme": "default"
+  "theme": "default",
+  "plugins": {
+    "highlight_code": {
+      "theme": "github-dark-dimmed"
+    }
+  }
 }
