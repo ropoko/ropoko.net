@@ -78,15 +78,15 @@ Vale dizer que por esse ser um gerenciador muito famoso presente em distros como
 
 Também, caso encontre algum programa que não esteja disponível via gerenciador de pacotes, como por exemplo o discord, perceba que ele está disponível no formato _**.deb**_, nesse caso, também conseguimos instalar esse pacote, pois o gerenciador é compatível com este formato, e dessa forma, cada gerenciador possui um formato de específico de pacote.
 
-<img src="/public/discord-deb.png" class="image" alt="Selecionado a opção de arquivo .deb para baixar o discord" />
+<img src="public/discord-deb.png" class="image" alt="Selecionado a opção de arquivo .deb para baixar o discord" />
 
 e como exemplo de instalar um aquivo .deb no ubuntu:
 
-<img src="/public/install-deb.png" class="image" alt="escolhendo a opção de abrir com outras aplicações" />
+<img src="public/install-deb.png" class="image" alt="escolhendo a opção de abrir com outras aplicações" />
 
 - basta clicar com o botão direito e abrir com outra aplicação, no caso, o software install.
 
-<img src="/public/software-install.png" class="image" alt="Selecionado a loja de software do ubuntu" />
+<img src="public/software-install.png" class="image" alt="Selecionado a loja de software do ubuntu" />
 
 isso abrirá a central de softwares do Ubuntu, e então basta clicar em instalar.
 
@@ -102,7 +102,7 @@ Por outro lado, temos no Manjaro, que também utiliza o gerenciador Pacman, simi
 Apenas para esclarecer, os pacotes que vem do **AUR** são mantidos pela comunidade, mas também existe a possibilidade de usar apenas os [pacotes oficiais](https://archlinux.org/packages/) caso você prefira.
 
 ### Snap
-Snap é um software para você criar aplicações e publicar pacotes que podem ser usados em uma vasta quantidade de distribuições Linux, dessa maneira, de certa forma "inovou" na maneira que desenvolvedores criam/publicam softwares para sistemas linux, pois se antes precisavam criar pacotes para vários gerenciadores de pacotes, para então poder ter seu software funcionando em diferentes sistemas, agora precisam somente empacotar seu software como "snap" e ele já garante que vai funcionar corretamente na maioria dos sistemas.
+Snap é um software para você criar aplicações e publicar pacotes que podem ser usados em uma vasta quantidade de distribuições Linux, dessa maneira, de certa forma "inovou" na maneira que desenvolvedores criampublicam softwares para sistemas linux, pois se antes precisavam criar pacotes para vários gerenciadores de pacotes, para então poder ter seu software funcionando em diferentes sistemas, agora precisam somente empacotar seu software como "snap" e ele já garante que vai funcionar corretamente na maioria dos sistemas.
 
 Por ser criado pela mesma empresa criadora do Ubuntu - [Canonical](https://canonical.com/), ao instalá-lo, você já possui automaticamente acesso aos pacotes snap, não precisando adicioná-los manualmente. No caso de ser um sistema no qual esses pacotes não venham por padrão, você pode seguir esse [passo a passo](https://snapcraft.io/docs/installing-snapd) - basta escolher qual o sistema que você está usando e aplicar os comandos no terminal.
 
@@ -128,7 +128,7 @@ Continuando, para este tópico vou considerar o sistema Ubuntu, por ser o que ma
 
 **Nota:** Não vou passar pelo processo de instalação, uma vez que existem diversos tutoriais por ai que explicariam melhor que eu jamais conseguiria. Como indicação, sugiro [esse do Diolinux](https://www.youtube.com/watch?v=6GIAtOlXLQU) - embora seja antigo, o passo a passo ainda é o mesmo, e eventualmente qualquer passo que não esteja no vídeo, vale uma pesquisa a parte.
 
-<img src="/public/ubuntu.png" class="image" alt="interface inicial pós-instalação do ubuntu" />
+<img src="public/ubuntu.png" class="image" alt="interface inicial pós-instalação do ubuntu" />
 
 Ao entrar a primeira vez no sistema, podemos ver que alguns aplicativos já vem instalados, como:
 
@@ -154,7 +154,7 @@ Ao pesquisar por exemplo "Chrome" na loja de softwares, vai perceber que o "Goog
 
 Para baixar o **_"verdadeiro"_** Chrome, basta ir no site e escolher a versão **.deb**.
 
-<img src="/public/chrome-linux.png" class="image" alt="Instalado google chrome no ubuntu a partir do arquivo .deb" />
+<img src="public/chrome-linux.png" class="image" alt="Instalado google chrome no ubuntu a partir do arquivo .deb" />
 
 <br />
 <br />

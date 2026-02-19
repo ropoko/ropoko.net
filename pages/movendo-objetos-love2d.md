@@ -85,4 +85,4 @@ end
 > Note que nao alteramos a função love.draw()
 
 ## Resultado
-![](/public/movement-love2d.gif)
+![](public/movement-love2d.gif)
